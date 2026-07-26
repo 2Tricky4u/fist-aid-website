@@ -42,6 +42,7 @@
           "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --gap:  18px;
   --pad:  22px;
+  --padx: 22px;   /* padding horizontal ; elargi quand une carte est ouverte */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -228,7 +229,7 @@ a { color: var(--red-ink); }
   overflow: hidden; scroll-margin-top: 18px;
 }
 
-.card__body { padding: var(--pad) var(--pad) 16px; flex: 1; }
+.card__body { padding: var(--pad) var(--padx) 16px; flex: 1; }
 
 .card__head { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
 
@@ -258,7 +259,7 @@ a { color: var(--red-ink); }
 .card__more {
   display: flex; align-items: center; justify-content: space-between; width: 100%;
   border: 0; border-top: 1px solid var(--line); background: none; font: inherit;
-  color: var(--ink-dim); font-size: 14px; padding: 15px var(--pad); cursor: pointer;
+  color: var(--ink-dim); font-size: 14px; padding: 15px var(--padx); cursor: pointer;
   transition: background .15s ease, color .15s ease;
 }
 .card__more:hover { background: #FAFBFC; color: var(--navy); }
@@ -271,12 +272,24 @@ a { color: var(--red-ink); }
   grid-column: 1 / -1;
   box-shadow: var(--shadow-up);
   border-color: var(--line-2);
+  /* La carte occupe toute la largeur, mais le texte ne doit pas s'y etirer :
+     on inset le contenu au lieu de le laisser courir sur 1400 px. */
+  --padx: clamp(22px, 6vw, 132px);
 }
+
+/* Les puces essentielles deviennent un bandeau de reperes, pas une colonne
+   de quatre lignes perdues dans le vide. */
+.card.is-open .bul {
+  display: flex; flex-wrap: wrap; gap: 4px 26px;
+  padding-bottom: 4px;
+}
+.card.is-open .bul li { padding: 4px 0; }
+.card.is-open .card__head { margin-bottom: 14px; }
 
 .panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .28s ease; }
 .card.is-open .panel { grid-template-rows: 1fr; }
 .panel__in { overflow: hidden; }
-.panel__pad { padding: 4px var(--pad) var(--pad); }
+.panel__pad { padding: 4px var(--padx) var(--pad); }
 
 /* =========================================================================
    Detail panel content
@@ -300,8 +313,9 @@ a { color: var(--red-ink); }
 }
 
 .blocks { display: grid; gap: 22px; }
-@media (min-width: 1100px) {
-  .blocks { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+@media (min-width: 960px) {
+  .blocks { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start;
+            column-gap: 46px; }
   .blocks > .b--wide { grid-column: 1 / -1; }
 }
 
@@ -331,7 +345,7 @@ a { color: var(--red-ink); }
   background: var(--ink-dim); transform: translateY(-2px);
 }
 
-.b--prose p { font-size: 14.5px; line-height: 1.65; }
+.b--prose p { font-size: 14.5px; line-height: 1.65; max-width: 72ch; }
 .b--prose p + p { margin-top: 10px; }
 
 .note, .warn, .myth, .good {
@@ -405,9 +419,13 @@ a { color: var(--red-ink); }
    ========================================================================= */
 
 .fig { margin: 0; }
+.fig > h4 { max-width: 660px; margin-left: auto; margin-right: auto; }
+/* Le cadre epouse l'illustration au lieu de s'etirer sur toute la largeur :
+   sans cela on obtient un grand rectangle vide avec une petite image au centre. */
 .fig__box {
   border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--card);
   padding: 12px; overflow-x: auto;
+  max-width: 660px; margin: 0 auto;
 }
 /* Plafonné : sans max-width, un schéma en pleine largeur de grille s'étire
    jusqu'à devenir illisible. */
@@ -417,6 +435,7 @@ a { color: var(--red-ink); }
 }
 .fig__cap {
   font-size: 13px; color: var(--ink-dim); line-height: 1.5; margin-top: 9px;
+  max-width: 660px; margin-left: auto; margin-right: auto;
 }
 /* planche en attente de chargement, ou absente */
 .fig--pending { display: none; }
@@ -512,6 +531,15 @@ a { color: var(--red-ink); }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .blocks { grid-template-columns: 1fr; }
   .hdr__note { max-width: none; }
+}
+
+@media (max-width: 700px) {
+  /* le bandeau horizontal de reperes n'a de sens que sur large ecran */
+  .card.is-open .bul { display: block; }
+  .card.is-open .bul li { display: flex; padding: 6px 0; }
+  /* place aux pastilles : sans le libelle, les niveaux tiennent sur une ligne */
+  .lvlnav .lvl__lab { display: none; }
+  .lvlnav { padding-top: 10px; }
 }
 
 @media (max-width: 620px) {

@@ -422,10 +422,8 @@
       b.addEventListener('click', function () { setLevel(l.id); });
       nav.appendChild(b);
     });
-    var close = el('button', null, 'Replier');
-    close.type = 'button';
-    close.addEventListener('click', function () { toggle(sec.id); });
-    nav.appendChild(close);
+    // pas de bouton « Replier » ici : la barre juste au-dessus dit déjà
+    // « Masquer les détails » et fait exactement la même chose.
     pad.appendChild(nav);
 
     var blocks = (sec.complet || []).slice();
@@ -460,7 +458,9 @@
 
     if (history.replaceState) history.replaceState(null, '', '#' + id);
     if (!opts.silent) {
-      card.scrollIntoView({ block: 'nearest', behavior: prefersReduced() ? 'auto' : 'smooth' });
+      // 'start' plutôt que 'nearest' : une carte ouverte est haute, et 'nearest'
+      // laissait souvent son en-tête au-dessus de la zone visible.
+      card.scrollIntoView({ block: 'start', behavior: prefersReduced() ? 'auto' : 'smooth' });
       card.querySelector('.card__title').setAttribute('tabindex', '-1');
       card.querySelector('.card__title').focus({ preventScroll: true });
     }
