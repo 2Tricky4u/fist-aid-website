@@ -108,6 +108,44 @@ window.SOURCES = {
     checked: '2026-07-26'
   },
 
+  'crash3': {
+    org: 'CRASH-3 Collaborators — The Lancet',
+    title: 'Effects of tranexamic acid on death, disability and vascular occlusive events in acute traumatic brain injury (CRASH-3)',
+    ref: 'Lancet 2019 ; bénéfice dans les 3 heures, traumatisme crânien léger à modéré',
+    url: 'https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32233-0/fulltext',
+    checked: '2026-07-26'
+  },
+
+  'se-gaba': {
+    org: 'Journal of Neuroscience',
+    title: 'Trafficking of GABA-A receptors, loss of inhibition, and a mechanism for pharmacoresistance in status epilepticus',
+    ref: 'J Neurosci 2005;25(34):7724',
+    url: 'https://www.jneurosci.org/content/25/34/7724',
+    checked: '2026-07-26'
+  },
+
+  'co-poisoning': {
+    org: 'StatPearls / NCBI Bookshelf',
+    title: 'Carbon Monoxide Poisoning — demi-vie de la carboxyhémoglobine et oxygénothérapie',
+    url: 'https://www.ncbi.nlm.nih.gov/books/NBK557888/',
+    checked: '2026-07-26'
+  },
+
+  'cpp-tbi': {
+    org: 'Brain Trauma Foundation / revue Critical Care',
+    title: 'Cerebral perfusion pressure targets after traumatic brain injury: a reappraisal',
+    ref: 'Cible de PPC recommandée : 60–70 mmHg',
+    url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12096506/',
+    checked: '2026-07-26'
+  },
+
+  'monro-kellie': {
+    org: 'Journal of Cerebral Blood Flow & Metabolism',
+    title: 'Monro-Kellie 2.0 — the dynamic vascular and venous pathophysiological components of intracranial pressure',
+    url: 'https://journals.sagepub.com/doi/pdf/10.1177/0271678x16648711',
+    checked: '2026-07-26'
+  },
+
   'swiss-ht': {
     org: 'ICAR MedCom — Commission internationale de médecine d’urgence en montagne',
     title: 'Clinical staging of accidental hypothermia: The Revised Swiss System',

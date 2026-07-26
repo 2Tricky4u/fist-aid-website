@@ -592,12 +592,23 @@ window.SECTIONS = [
       'compression directe pour les hémorragies non contrôlables, en particulier là où un garrot est ' +
       'impossible (jonctions, cou, tronc). Ils se posent au contact direct de la source du saignement, ' +
       'avec maintien de la compression.' },
+    { type: 'prose', title: 'Coagulopathie du traumatisé et acide tranexamique', text: [
+      'Le traumatisé grave ne saigne pas seulement par la brèche vasculaire : il développe une ' +
+      '**coagulopathie précoce**, présente dès l’admission, entretenue notamment par une ' +
+      'hyperfibrinolyse — les caillots formés sont dissous à mesure qu’ils se constituent.',
+      'L’acide tranexamique bloque cette fibrinolyse. Les grands essais **CRASH** ont établi qu’il ' +
+      'réduit la mortalité lorsqu’il est administré précocement, sans augmentation des événements ' +
+      'thrombotiques — le bénéfice étant concentré sur les **premières heures**, ce qui a fait ' +
+      'retenir une fenêtre de **3 heures** dans les protocoles. Administré tardivement, il perd tout ' +
+      'intérêt. C’est un traitement médicalisé, mais il fait partie des raisons pour lesquelles ' +
+      'l’heure de l’accident transmise à la centrale est une information utile.'
+    ]},
     { type: 'note', title: 'Triade létale et hypothermie', text:
       'Chez le traumatisé qui saigne, l’hypothermie aggrave les troubles de la coagulation, qui ' +
       'aggravent le saignement, qui aggrave l’acidose — la « triade létale ». Couvrir la victime n’est ' +
       'pas un geste de confort : c’est un geste hémostatique.' }
   ],
-  sources: ['erc-fa', 'rcuk-fa', 'ilcor-fa', 'anzcor-bleed']
+  sources: ['erc-fa', 'rcuk-fa', 'ilcor-fa', 'anzcor-bleed', 'crash3']
 },
 
 /* =========================================================================
@@ -1042,6 +1053,21 @@ window.SECTIONS = [
       'd’arrêt spontané chute fortement au-delà, tandis que le risque de lésion neuronale et de ' +
       'résistance au traitement augmente. C’est une urgence thérapeutique traitée par ' +
       'benzodiazépines en première intention.' },
+    { type: 'prose', title: 'Pourquoi la crise devient de plus en plus difficile à arrêter', wide: true, text: [
+      'Le seuil de 5 minutes n’est pas qu’une convention statistique : il correspond à un basculement ' +
+      'moléculaire. Une crise prolongée déclenche l’**internalisation des récepteurs GABA-A** — les ' +
+      'récepteurs inhibiteurs synaptiques sont physiquement retirés de la membrane et séquestrés à ' +
+      'l’intérieur du neurone. L’inhibition, qui est le mécanisme normal d’arrêt d’une crise, se ' +
+      'désarme donc au fur et à mesure que la crise dure.',
+      'Les conséquences thérapeutiques sont brutales. Les **benzodiazépines**, qui agissent ' +
+      'précisément sur ces récepteurs, perdent jusqu’à un facteur **20 de puissance en 30 minutes** ' +
+      'et peuvent échouer à arrêter la crise **au-delà de 45 minutes**. En parallèle, les récepteurs ' +
+      '**NMDA** excitateurs sont adressés vers la surface, ce qui entretient l’excitation et ajoute ' +
+      'une composante excitotoxique.',
+      'Autrement dit, l’état de mal épileptique **se rend lui-même résistant à son traitement**. ' +
+      'C’est ce qui transforme un chronomètre en geste de secours : noter l’heure de début n’est pas ' +
+      'de la paperasse, c’est la donnée qui déterminera la stratégie thérapeutique.'
+    ]},
     { type: 'note', title: 'Diagnostics à ne pas manquer', text:
       'Toute convulsion n’est pas une épilepsie. Une syncope convulsivante, une hypoglycémie, une ' +
       'intoxication, un sevrage alcoolique, une éclampsie chez la femme enceinte ou une hypoxie ' +
@@ -1049,7 +1075,7 @@ window.SECTIONS = [
       'mouvements convulsifs. En cas de doute sur la respiration après l’épisode, appliquez ' +
       'l’algorithme BLS.' }
   ],
-  sources: ['erc-fa', 'rcuk-fa', 'ilcor-fa']
+  sources: ['se-gaba', 'erc-fa', 'rcuk-fa', 'ilcor-fa']
 },
 
 {
@@ -1476,6 +1502,34 @@ window.SECTIONS = [
       'appliquées au tissu cérébral. Elle entraîne une cascade neuro-métabolique transitoire — flux ' +
       'ionique, hyperglycolyse puis dépression du métabolisme du glucose — sans lésion visible en ' +
       'imagerie standard. Une imagerie normale n’exclut donc en rien une commotion.' },
+    { type: 'prose', title: 'Doctrine de Monro-Kellie — la boîte qui ne s’agrandit pas', wide: true, text: [
+      'Le crâne adulte est un contenant rigide de volume fixe, occupé par trois compartiments : le ' +
+      '**parenchyme cérébral**, le **sang** et le **liquide céphalo-rachidien**. Leur somme est ' +
+      'constante. Tout volume qui s’ajoute — hématome, œdème, contusion — doit donc être compensé par ' +
+      'la réduction d’un autre, essentiellement par chasse du LCR et du sang veineux.',
+      'Cette compensation fonctionne bien… jusqu’à épuisement. La courbe pression-volume n’est pas ' +
+      'linéaire : longtemps quasi plate, elle devient brutalement verticale. C’est pourquoi un ' +
+      'patient peut rester cliniquement stable puis se dégrader en quelques minutes, sans qu’il se ' +
+      'soit rien passé de nouveau — le saignement progressait simplement le long de la partie plate ' +
+      'de la courbe.'
+    ]},
+    { type: 'prose', title: 'La formule qui gouverne tout : PPC = PAM − PIC', text: [
+      'La pression de perfusion cérébrale est la différence entre la pression artérielle moyenne et ' +
+      'la pression intracrânienne. Deux façons d’affamer un cerveau, donc : laisser monter la PIC, ou ' +
+      'laisser chuter la PAM. La cible recommandée après traumatisme crânien grave se situe autour de ' +
+      '**60 à 70 mmHg** de PPC.',
+      'C’est la raison pour laquelle, en préhospitalier, **l’hypotension et l’hypoxie sont les deux ' +
+      'ennemis principaux** — bien avant toute considération neurochirurgicale. Un seul épisode ' +
+      'd’hypotension chez un traumatisé crânien aggrave nettement le pronostic. Sur le terrain, cela ' +
+      'se traduit simplement : maintenir la respiration et la circulation, c’est déjà du traitement ' +
+      'neurologique.'
+    ]},
+    { type: 'note', title: 'Acide tranexamique', text:
+      'L’essai **CRASH-3** a montré qu’administré **dans les 3 heures** suivant le traumatisme, ' +
+      'l’acide tranexamique réduit la mortalité liée au traumatisme crânien **léger à modéré**, sans ' +
+      'bénéfice démontré dans les formes sévères et sans augmentation des événements thrombotiques. ' +
+      'C’est un traitement médicalisé — mais la fenêtre de 3 heures explique une partie de l’urgence ' +
+      'de l’appel.' },
     { type: 'note', title: 'Hypertension intracrânienne', text:
       'La boîte crânienne est inextensible : tout processus expansif finit par comprimer le tissu ' +
       'cérébral. Céphalées croissantes, vomissements en jet, altération progressive de la conscience, ' +
@@ -1486,7 +1540,7 @@ window.SECTIONS = [
       'N’obturez pas l’orifice : laissez s’écouler et couvrez sans comprimer. Le risque infectieux ' +
       '(méningite) impose une prise en charge spécialisée.' }
   ],
-  sources: ['erc-fa', 'rcuk-fa', 'ilcor-fa']
+  sources: ['monro-kellie', 'cpp-tbi', 'crash3', 'erc-fa', 'rcuk-fa', 'ilcor-fa']
 },
 
 {
@@ -1862,6 +1916,22 @@ window.SECTIONS = [
       'Un oxymètre de pouls standard ne distingue pas la carboxyhémoglobine de l’oxyhémoglobine : il ' +
       'peut afficher une saturation **normale** chez un patient gravement intoxiqué. Le traitement ' +
       'repose sur l’oxygène à haute concentration, voire l’oxygénothérapie hyperbare.' },
+    { type: 'table', title: 'Demi-vie de la carboxyhémoglobine — pourquoi l’oxygène est le traitement', wide: true,
+      head: ['Situation', 'Demi-vie de la COHb'],
+      rows: [
+        ['Air ambiant (rien fait)', '**4 à 6 heures**'],
+        ['Oxygène à 100 %, pression atmosphérique', '**60 à 90 minutes**'],
+        ['Oxygénothérapie hyperbare', '**environ 25 minutes**']
+      ]},
+    { type: 'prose', title: 'Ce que ce tableau implique sur le terrain', text: [
+      'L’oxygène ne « soigne » pas le monoxyde : il le **déplace**. En saturant l’hémoglobine, il ' +
+      'accélère massivement la dissociation du CO, divisant la demi-vie par un facteur 4 à 5 dès la ' +
+      'pression atmosphérique. C’est pourquoi la première mesure médicale est l’oxygène à haute ' +
+      'concentration, débuté sans attendre le dosage.',
+      'Cela explique aussi le geste du secouriste : sortir la personne à l’air libre lance déjà ' +
+      'l’élimination, même si l’air ambiant est de loin le moins efficace des trois. Chaque minute ' +
+      'passée dans l’atmosphère contaminée continue au contraire de charger l’hémoglobine.'
+    ]},
     { type: 'note', title: 'Ce que la centrale 145 apporte', text:
       'Tox Info Suisse dispose des compositions de produits commercialisés en Suisse et de bases de ' +
       'données toxicologiques. Elle évalue le risque réel selon la dose, le poids et le délai — ce qui ' +
@@ -1874,7 +1944,7 @@ window.SECTIONS = [
       'ne dispense ni de l’appel ni de la surveillance : sa durée d’action peut être plus courte que ' +
       'celle du toxique.' }
   ],
-  sources: ['tox', 'erc-fa', 'rcuk-fa', 'ilcor-fa']
+  sources: ['tox', 'co-poisoning', 'erc-fa', 'rcuk-fa', 'ilcor-fa']
 },
 
 /* =========================================================================
