@@ -75,11 +75,20 @@ window.SECTIONS = [
       'Secours professionnels',
       'Hôpital / soins post-arrêt'
     ]},
-    { type: 'myth', title: 'Idée reçue : « les secours arrivent en 5 à 7 minutes en ville »', text:
-      'Ce n’est pas garanti. En Suisse, il faut compter en moyenne de l’ordre de **10 à 12 minutes**, ' +
-      'parfois davantage en périphérie et en région de montagne. Ce délai est précisément la raison ' +
-      'pour laquelle les gestes des témoins sont déterminants : ce sont eux, pas l’ambulance, qui ' +
-      'occupent les premières minutes.' },
+    { type: 'myth', title: 'Idée reçue : « 5 à 6 minutes en ville, 10 à 12 à la campagne »', text:
+      'Ces chiffres, souvent cités en cours, sont **optimistes**. Les données mesurées du Registre ' +
+      'suisse de l’arrêt cardiaque pour le canton de Fribourg (2018–2022, 1127 cas) donnent une ' +
+      'médiane de **12 minutes** entre l’appel au 144 et l’arrivée du premier véhicule : ' +
+      '**9 minutes en zone urbaine**, **15 en zone rurale**, jusqu’à **19** dans les secteurs les ' +
+      'plus isolés. Et il s’agit d’arrêts cardiaques, donc de la priorité d’engagement la plus ' +
+      'élevée : ce sont des délais parmi les plus courts du système, pas un plafond.' },
+    { type: 'note', title: 'Ce que dit la norme, et ce que disent les mesures', text:
+      'Les directives de l’Interassociation de sauvetage (IAS), reprises dans la législation de ' +
+      'certains cantons, fixent un délai d’intervention de **15 minutes au maximum**, à réduire à ' +
+      '**10 minutes** si possible. C’est un objectif de planification. Les mesures de terrain ' +
+      'montrent que la moitié des interventions rurales le dépassent — d’où l’intérêt des ' +
+      'premiers répondants, qui arrivaient à Fribourg en **9 minutes** médianes, souvent avant ' +
+      'l’ambulance.' },
     { type: 'warn', title: 'Votre sécurité passe avant tout', text:
       'Un secouriste blessé devient une victime de plus et mobilise des moyens au lieu d’en libérer. ' +
       'L’obligation légale suisse de porter secours (art. 128 CP) n’exige jamais de mettre sa propre ' +
@@ -103,6 +112,15 @@ window.SECTIONS = [
       'Le retour d’information (« revenez me confirmer ») a une deuxième fonction : il vous dit si ' +
       'l’alarme est réellement partie, ce que vous ne pouvez pas supposer.'
     ]},
+    { type: 'note', title: 'Sur la qualité de ces chiffres', text:
+      'Il n’existe pas, à notre connaissance, de statistique **nationale** publiée des délais ' +
+      'd’intervention en Suisse : les données disponibles sont cantonales et proviennent surtout des ' +
+      'registres d’arrêt cardiaque. Les chiffres ci-dessus concernent un seul canton, de géographie ' +
+      'mixte — Genève ou Bâle feraient probablement mieux, un canton alpin moins bien. Ils mesurent ' +
+      'l’arrivée du véhicule **sur les lieux**, pas au chevet du patient : étages, ascenseurs et ' +
+      'accès ajoutent encore du temps. Dans l’enquête européenne la plus récente sur les systèmes de ' +
+      'secours, la Suisse ne figure d’ailleurs pas parmi les pays annonçant une médiane urbaine ' +
+      'inférieure à 10 minutes.' },
     { type: 'note', title: 'Cadre légal suisse', text:
       'L’art. 128 du Code pénal punit quiconque ne prête pas secours à une personne en danger de mort ' +
       'imminent alors qu’on pouvait raisonnablement l’exiger de lui, ainsi que celui qui empêche ou ' +
@@ -110,7 +128,7 @@ window.SECTIONS = [
       'pécuniaire. Le critère est ce qui est « raisonnablement exigible » : appeler le 144 l’est ' +
       'toujours ; entrer dans un bâtiment en feu ne l’est pas.' }
   ],
-  sources: ['erc-bls', 'src', 'cp-128']
+  sources: ['ohca-fr', 'ias', 'erc-bls', 'src', 'cp-128']
 },
 
 {
@@ -129,7 +147,7 @@ window.SECTIONS = [
         ['**144**',  'Ambulance / urgence médicale', 'Toute urgence médicale : inconscience, douleur thoracique, signes d’AVC, hémorragie, brûlure grave, chute grave.'],
         ['**117**',  'Police',      'Accident de circulation, violence, personne disparue, danger public.'],
         ['**118**',  'Pompiers',    'Incendie, fumée, fuite de gaz, produit chimique, désincarcération, inondation.'],
-        ['**112**',  'Urgence européenne', 'Numéro unique européen. Fonctionne en Suisse et aboutit à une centrale d’engagement. Utile si vous ne savez pas quel numéro composer.'],
+        ['**112**',  'Urgence européenne', 'Numéro unique européen, valable en Suisse. **Attention : en Suisse, il aboutit à la centrale de police**, qui transmet ensuite. Pour une urgence médicale, composez directement le **144** — vous économisez un transfert.'],
         ['**145**',  'Tox Info Suisse', 'Intoxication ou suspicion d’ingestion d’un produit toxique. Gratuit, 24 h/24. Depuis l’étranger : +41 44 251 51 51.'],
         ['**1414**', 'Rega',        'Sauvetage aérien : montagne, zone difficile d’accès, transport héliporté.']
       ]},
@@ -146,9 +164,10 @@ window.SECTIONS = [
       'rythme avec vous. C’est elle qui met fin à l’appel. Mettez le haut-parleur pour garder les ' +
       'deux mains libres.' },
     { type: 'note', title: 'Depuis un mobile', text:
-      'Les urgences fonctionnent même sans crédit et souvent sans réseau de votre opérateur, en ' +
-      'passant par un autre réseau disponible. Un téléphone verrouillé permet toujours l’appel ' +
-      'd’urgence.' }
+      'L’appel d’urgence est gratuit et fonctionne avec **n’importe quelle carte SIM**, suisse ou ' +
+      'étrangère, y compris une carte prépayée **sans crédit**. L’écran de verrouillage d’un ' +
+      'téléphone propose toujours l’appel d’urgence. Mettez le haut-parleur : vous aurez besoin de ' +
+      'vos deux mains.' }
   ],
   pro: [
     { type: 'prose', title: 'Régulation et priorisation', text: [
@@ -159,6 +178,15 @@ window.SECTIONS = [
       '« décrivez sa respiration » — ne retardent pas les secours : ceux-ci sont généralement engagés ' +
       'dès la localisation obtenue, pendant que l’interrogatoire continue.'
     ]},
+    { type: 'prose', title: 'Pourquoi la Suisse garde des numéros séparés', text: [
+      'Le comité de pilotage « Appels d’urgence Suisse » recommande explicitement de communiquer ' +
+      '**117 / 118 / 144** plutôt que le 112 seul. La raison tient en un mot : le **triage direct**. ' +
+      'Un appel au 144 arrive d’emblée chez des professionnels de la santé, sans étape intermédiaire.',
+      'L’exemple qu’ils donnent est parlant : sur un numéro unique, un **infarctus avec danger vital** ' +
+      'se retrouve dans la file d’attente **derrière les appels signalant de l’eau dans une cave**, ' +
+      'parce que la nature de l’urgence n’est pas visible avant le décrochage. Le risque de saturation ' +
+      'est maximal précisément quand la demande explose — orages, catastrophes, accidents majeurs.'
+    ]},
     { type: 'note', title: 'RCP guidée par téléphone', text:
       'La réanimation guidée par le régulateur augmente le taux de réanimation par les témoins et la ' +
       'survie. Elle fait partie intégrante des recommandations : c’est une raison de plus de ne pas ' +
@@ -168,7 +196,7 @@ window.SECTIONS = [
       'décrire sa position est difficile. Les smartphones transmettent également une localisation ' +
       'd’urgence automatique aux centrales lors d’un appel.' }
   ],
-  sources: ['tox', 'rega', 'erc-bls', 'src']
+  sources: ['tox', 'rega', 'notrufe-ch', 'ias', 'erc-bls', 'src']
 },
 
 {
@@ -225,6 +253,11 @@ window.SECTIONS = [
       'Vérifiez la respiration pendant **10 secondes au maximum**.',
       'Ne recherchez pas le pouls.'
     ]},
+    { type: 'warn', title: 'Une brève convulsion peut annoncer un arrêt cardiaque', text:
+      'Le SRC le mentionne explicitement : **une convulsion généralisée brève peut être le premier ' +
+      'signe d’un arrêt cardiaque**, et non d’une crise d’épilepsie. Après des secousses de quelques ' +
+      'secondes, revenez toujours à la question de base — réagit-elle, respire-t-elle normalement ? ' +
+      'Si la respiration est absente ou anormale, c’est une RCP qu’il faut, pas une PLS.' },
     { type: 'warn', title: 'Les gasps ne sont pas une respiration', text:
       'Des mouvements respiratoires rares, bruyants, irréguliers, en « hoquet » ou en « ronflement » ' +
       'sont des **gasps agoniques**. Ils sont fréquents dans les premières minutes d’un arrêt ' +
@@ -288,7 +321,7 @@ window.SECTIONS = [
   ],
   complet: [
     { type: 'steps', title: 'Massage cardiaque', items: [
-      'Victime sur le dos, sur une surface aussi dure que possible.',
+      'Victime sur le dos, sur une surface aussi dure que possible — mais **ne sortez pas un adulte de son lit** pour cela : le SRC le déconseille explicitement, le temps perdu coûte plus que le matelas ne fait perdre.',
       'Talon de la main au **milieu de la poitrine**, sur la moitié inférieure du sternum ; seconde main par-dessus, doigts croisés.',
       'Bras tendus, épaules à la verticale des mains, poussée avec le poids du buste.',
       'Rythme : **100 à 120 compressions par minute**.',
@@ -299,7 +332,7 @@ window.SECTIONS = [
     ]},
     { type: 'steps', title: 'DAE / AED', items: [
       'Allumez-le dès son arrivée et **suivez ses instructions vocales**.',
-      'Dénudez et séchez rapidement la poitrine ; rasez si le DAE fournit un rasoir et que la pilosité empêche le collage.',
+      'Dénudez et séchez rapidement la poitrine ; rasez si le DAE fournit un rasoir et que la pilosité empêche le collage. Un soutien-gorge se **déplace** plus vite qu’il ne se retire.',
       'Une électrode **sous la clavicule droite**, l’autre **sous l’aisselle gauche**.',
       'S’il y a plusieurs secouristes, continuez les compressions pendant la pose des électrodes.',
       'Personne ne touche la victime pendant l’analyse et pendant le choc.',
@@ -319,6 +352,12 @@ window.SECTIONS = [
       'Compressions trop superficielles · relâchement incomplet entre les compressions · ' +
       'interruptions trop longues · insufflations trop fortes ou trop rapides · retard à l’allumage ' +
       'du DAE. Le meilleur massage est celui qui s’arrête le moins souvent.' },
+    { type: 'note', title: 'En cas de doute, on réanime — « in dubio pro REA »', text:
+      'C’est la règle explicite du SRC. Si vous ignorez ce que la personne aurait voulu, **réanimez**. ' +
+      'La seule exception est un refus clairement établi : directives anticipées, statut « réanimation : ' +
+      'non », volonté exprimée oralement ou par écrit. Dans ce cas, ce choix se respecte, même si la ' +
+      'réanimation aurait eu de bonnes chances de réussir. Non veut dire non. En l’absence d’indice ' +
+      'clair, l’absence d’information n’est pas un refus.' },
     { type: 'note', title: 'Les côtes qui cèdent', text:
       'Des craquements costaux ou chondro-costaux sont fréquents et attendus lors d’un massage ' +
       'efficace, surtout chez la personne âgée. Ce n’est pas une raison d’arrêter ni d’appuyer moins ' +
@@ -357,6 +396,34 @@ window.SECTIONS = [
       'le rythme dans un état « choquable » plus longtemps. RCP et DAE sont complémentaires, pas ' +
       'alternatifs.'
     ]},
+    { type: 'prose', title: 'Le modèle en trois phases — pourquoi le temps change la stratégie', wide: true, text: [
+      'La fibrillation ventriculaire ne se comporte pas de la même façon à la minute 2 et à la ' +
+      'minute 15. Le modèle de Weisfeldt et Becker distingue trois phases, dont les bornes ont été ' +
+      'précisées depuis :',
+      '**Phase électrique** (de l’effondrement à environ 7 minutes) : le myocarde est encore riche en ' +
+      'substrats. Un choc immédiat suffit souvent à rétablir une circulation — c’est la fenêtre où le ' +
+      'DAE fait presque tout le travail. **Phase circulatoire** (environ 7 à 17 minutes) : les ' +
+      'réserves énergétiques s’épuisent, le myocarde ischémique répond mal au choc. Des compressions ' +
+      'de qualité **avant** la défibrillation améliorent la probabilité de succès du choc — c’est ici ' +
+      'que la réanimation par les témoins pèse le plus lourd. **Phase métabolique** (au-delà ' +
+      'd’environ 17 minutes) : accumulation de métabolites toxiques, lésions de reperfusion. ' +
+      'Compressions et choc ne suffisent généralement plus.',
+      'C’est la justification physiologique du message « massez tout de suite » : le témoin ne fait ' +
+      'pas qu’attendre l’ambulance, il maintient la victime dans une phase où les secours auront ' +
+      'encore quelque chose à traiter.'
+    ]},
+    { type: 'prose', title: 'Ce que mesurent les professionnels — la capnographie', text: [
+      'La pression télé-expiratoire en CO₂ (ETCO₂) est un reflet non invasif du débit cardiaque ' +
+      'généré par les compressions : sans circulation, le CO₂ produit par les tissus ne parvient plus ' +
+      'aux poumons. C’est le meilleur indicateur objectif de la **qualité** du massage disponible en ' +
+      'temps réel.',
+      'Deux repères structurent la conduite : une ETCO₂ qui reste **inférieure à 10 mmHg** (1,33 kPa) ' +
+      'malgré des compressions de qualité et des voies aériennes protégées est de pronostic très ' +
+      'défavorable — persistante après 20 minutes, elle entre dans les critères d’arrêt de la ' +
+      'réanimation ou d’orientation vers une assistance circulatoire. À l’inverse, une **élévation ' +
+      'brusque et soutenue** est l’un des signes les plus fiables de reprise d’activité circulatoire, ' +
+      'et précède souvent le pouls palpable.'
+    ]},
     { type: 'note', title: 'Cas particuliers de la pose des électrodes', text:
       'Pacemaker ou défibrillateur implanté visible sous la peau : décalez l’électrode d’au moins ' +
       '8 cm. Patch médicamenteux : retirez-le et essuyez la peau. Thorax mouillé : séchez, le choc ' +
@@ -369,7 +436,7 @@ window.SECTIONS = [
       'sous tension, toxiques), puis soins post-arrêt avec contrôle ciblé de la température et ' +
       'évaluation neurologique différée.' }
   ],
-  sources: ['erc-bls', 'src', 'rcuk-bls', 'erc-exec']
+  sources: ['erc-bls', 'src', 'rcuk-bls', 'erc-exec', 'three-phase', 'capno']
 },
 
 {
@@ -563,7 +630,7 @@ window.SECTIONS = [
       ['Nourrisson (< 1 an)', 'Les **deux pouces**, mains encerclant le thorax. Cette technique remplace la technique à deux doigts dans les directives 2025.'],
       ['Enfant (1 an – puberté)', 'Le talon d’**une main**, ou les deux mains si l’enfant est grand ou le secouriste peu puissant.'],
       ['Emplacement', 'Moitié inférieure du sternum, comme chez l’adulte.'],
-      ['Profondeur', 'Environ **un tiers de l’épaisseur antéro-postérieure** du thorax.'],
+      ['Profondeur', 'Au moins **un tiers de l’épaisseur antéro-postérieure** du thorax — soit environ **4 cm** chez le nourrisson et **5 cm** chez l’enfant.'],
       ['Rythme', '**100 à 120 par minute**, comme chez l’adulte.']
     ]},
     { type: 'steps', title: 'Insufflations', items: [
@@ -575,9 +642,18 @@ window.SECTIONS = [
     { type: 'warn', title: 'Si vous ne pouvez pas ou ne voulez pas insuffler', text:
       'Faites des **compressions seules** et appelez le {144} immédiatement. C’est très nettement ' +
       'préférable à ne rien faire. Le geste imparfait bat l’inaction.' },
-    { type: 'note', title: 'Un DAE adulte peut être utilisé', text:
-      'Si aucun DAE pédiatrique n’est disponible, utilisez le DAE adulte plutôt que rien, en évitant ' +
-      'que les électrodes ne se touchent — au besoin, une électrode devant et une dans le dos.' }
+    { type: 'kv', title: 'DAE chez l’enfant — repères du SRC', items: [
+      ['Seuil', 'Moins de **25 kg**, ou moins de **8 ans** environ.'],
+      ['Mode enfant', 'Activez-le si l’appareil en est équipé.'],
+      ['Électrodes', 'Collez-les **une sur la poitrine, une dans le dos**.'],
+      ['Pas de matériel pédiatrique ?', 'Utilisez le DAE adulte plutôt que rien, en évitant que les électrodes ne se touchent.']
+    ]},
+    { type: 'note', title: 'Un seul algorithme en Suisse', text:
+      'Pour les secouristes en Suisse, il n’existe **qu’un seul algorithme BLS-AED-SRC**, valable pour ' +
+      'toutes les classes d’âge. Les particularités pédiatriques ci-dessus s’y ajoutent, elles ne le ' +
+      'remplacent pas. La distinction adulte/enfant ne repose d’ailleurs pas sur un âge précis mais sur ' +
+      'l’apparence physique : on parle d’un enfant tant que la personne a une allure d’enfant, ' +
+      'typiquement jusqu’à la puberté.' }
   ],
   pro: [
     { type: 'prose', title: 'Ce qui a changé en 2025', text: [
@@ -599,8 +675,15 @@ window.SECTIONS = [
     { type: 'prose', title: 'Pourquoi « un tiers du thorax » plutôt qu’une valeur en centimètres', text:
       'La taille varie énormément entre un nouveau-né et un enfant proche de la puberté : une ' +
       'consigne en centimètres serait insuffisante à un extrême et dangereuse à l’autre. La fraction ' +
-      'du diamètre antéro-postérieur s’adapte automatiquement à la morphologie. En ordre de grandeur, ' +
-      'cela correspond à environ 4 cm chez le nourrisson et 5 cm chez l’enfant.' },
+      'du diamètre antéro-postérieur s’adapte automatiquement à la morphologie. Les repères chiffrés ' +
+      'd’environ 4 cm chez le nourrisson et 5 cm chez l’enfant sont des ordres de grandeur dérivés de ' +
+      'cette règle, pas des cibles indépendantes.' },
+    { type: 'note', title: 'ERC et AHA divergent sur un point', text:
+      'Si vous êtes **seul** face à un enfant en arrêt, l’ERC — donc le référentiel suisse — demande ' +
+      'environ **1 minute** de RCP avant d’aller chercher de l’aide. L’AHA recommande de son côté ' +
+      'environ **2 minutes** lorsque l’arrêt n’a pas été vu. Les deux poursuivent la même logique : ' +
+      'l’arrêt pédiatrique étant hypoxique, oxygéner d’abord prime sur alerter d’abord. Si un ' +
+      'téléphone est à portée, mettez le haut-parleur et ne quittez pas l’enfant.' },
     { type: 'note', title: 'Suite professionnelle', text:
       'Les équipes recherchent en priorité les causes réversibles d’origine respiratoire et ' +
       'circulatoire (obstruction, hypoxie, hypovolémie, sepsis), assurent une ventilation efficace et ' +
@@ -797,6 +880,29 @@ window.SECTIONS = [
       'hémorragique. Les deux se présentent de manière indiscernable au chevet du patient : seule ' +
       'l’imagerie cérébrale permet de les distinguer. C’est pourquoi aucun médicament — et surtout ' +
       'pas l’aspirine — ne doit être donné avant l’imagerie : il aggraverait une hémorragie.' },
+    { type: 'prose', title: '« Time is brain », chiffré', wide: true, text: [
+      'La formule paraît rhétorique ; elle a été quantifiée. Dans un AVC ischémique typique de gros ' +
+      'vaisseau, le cerveau perd environ **1,9 million de neurones par minute**, soit 14 milliards de ' +
+      'synapses et 12 km de fibres myélinisées — et environ **120 millions de neurones par heure**. ' +
+      'Rapporté au vieillissement normal, le cerveau ischémique **vieillit d’environ 3,6 ans par ' +
+      'heure** sans traitement.',
+      'Ces chiffres expliquent pourquoi la question posée au téléphone n’est pas « faut-il ' +
+      'déranger ? » mais « à quelle heure exactement ». Nuance honnête : ce sont des estimations ' +
+      'moyennes, et des travaux ultérieurs ont montré une **variabilité individuelle considérable** ' +
+      'selon le territoire atteint et la circulation collatérale. L’ordre de grandeur reste juste ; ' +
+      'la précision apparente ne doit pas tromper.'
+    ]},
+    { type: 'prose', title: 'La pénombre ischémique — ce que la reperfusion va chercher', text: [
+      'L’occlusion artérielle crée deux territoires. Le **cœur de l’infarctus** est irrémédiablement ' +
+      'nécrosé en quelques minutes. Autour, la **pénombre ischémique** est un tissu hypoperfusé mais ' +
+      'encore viable, maintenu en survie précaire par la circulation collatérale : il a cessé de ' +
+      'fonctionner mais n’est pas encore mort.',
+      'Toute la médecine de l’AVC aigu consiste à sauver cette pénombre avant qu’elle ne bascule dans ' +
+      'le cœur nécrotique. Sa taille et sa durée de survie varient énormément d’un patient à l’autre — ' +
+      'ce qui explique que l’imagerie de perfusion permette aujourd’hui d’élargir les fenêtres ' +
+      'thérapeutiques chez certains patients, et pourquoi aucune règle horaire simple ne peut ' +
+      'remplacer l’évaluation en centre spécialisé.'
+    ]},
     { type: 'note', title: 'Sensibilité de FAST', text:
       'FAST est un outil de dépistage conçu pour être simple et sensible aux AVC de la circulation ' +
       'antérieure. Il détecte moins bien les atteintes de la circulation postérieure, qui se ' +
@@ -807,7 +913,7 @@ window.SECTIONS = [
       'sans délai, puis thrombolyse et/ou thrombectomie en centre spécialisé. L’organisation en unités ' +
       'neurovasculaires (stroke units) améliore la survie et l’autonomie fonctionnelle.' }
   ],
-  sources: ['erc-fa', 'rcuk-fa', 'swissheart', 'ilcor-fa']
+  sources: ['saver', 'saver-variability', 'erc-fa', 'rcuk-fa', 'swissheart', 'ilcor-fa']
 },
 
 {
@@ -1039,7 +1145,13 @@ window.SECTIONS = [
       'Agitez le dispositif, expiration complète, embout entre les lèvres, déclenchez au début d’une ' +
       'inspiration lente et profonde, puis retenez la respiration quelques secondes. Une **chambre ' +
       'd’inhalation** améliore nettement le dépôt pulmonaire — utilisez-la si elle est disponible, ' +
-      'surtout chez l’enfant et en cas de crise.' }
+      'surtout chez l’enfant et en cas de crise.' },
+    { type: 'note', title: 'Combien de bouffées ?', text:
+      'Le schéma communément recommandé en crise, avec chambre d’inhalation : **4 bouffées** de ' +
+      'bronchodilatateur pour commencer, **une bouffée à la fois**, puis **2 bouffées ' +
+      'supplémentaires toutes les 2 minutes** selon la réponse, jusqu’à un maximum de **10 bouffées**. ' +
+      'Si les 10 bouffées ne suffisent pas, ou si l’effet ne tient pas, appelez le {144}. Respectez ' +
+      'le plan d’action personnel de la personne s’il en existe un.' }
   ],
   pro: [
     { type: 'prose', title: 'Mécanisme', text:
@@ -1058,7 +1170,7 @@ window.SECTIONS = [
       'anticholinergiques inhalés dans les formes sévères, et recours au sulfate de magnésium ou à la ' +
       'ventilation dans les formes réfractaires.' }
   ],
-  sources: ['erc-fa', 'rcuk-fa']
+  sources: ['erc-fa', 'rcuk-fa', 'bts-sign']
 },
 
 /* =========================================================================
@@ -1134,6 +1246,27 @@ window.SECTIONS = [
       'résultat, et aucune durée précise n’est donc recommandée. La surveillance du refroidissement ' +
       'excessif chez le jeune enfant est explicitement mentionnée. C’est un bon exemple de règle ' +
       'mnémotechnique populaire plus précise que la preuve qui la soutient.' },
+    { type: 'prose', title: 'Les trois zones de Jackson — pourquoi le refroidissement change l’issue', wide: true, text: [
+      'Une brûlure n’est pas une lésion homogène. Le modèle de Jackson y décrit trois zones ' +
+      'concentriques. Au contact de la source : la **zone de coagulation**, nécrose irréversible par ' +
+      'dénaturation des protéines — elle est perdue d’emblée. À la périphérie : la **zone ' +
+      'd’hyperhémie**, simplement vasodilatée, qui récupère spontanément.',
+      'Entre les deux se joue tout l’enjeu : la **zone de stase**, hypoperfusée, **lésée mais encore ' +
+      'viable**. Selon la prise en charge, elle récupère ou bascule dans la nécrose, ce qui étend la ' +
+      'brûlure en surface et en profondeur pendant les heures qui suivent. Refroidir précocement, ' +
+      'éviter l’hypotension, l’hypothermie et la compression de la zone, c’est agir sur cette zone-là ' +
+      'et sur elle seule.',
+      'C’est aussi pourquoi une brûlure « s’aggrave » dans les 48 premières heures sans que rien de ' +
+      'nouveau ne se soit produit : ce n’est pas une erreur d’évaluation initiale, c’est la zone de ' +
+      'stase qui a évolué.'
+    ]},
+    { type: 'note', title: 'Le remplissage vasculaire — formule de Parkland', text:
+      'Au-delà d’un certain pourcentage de surface brûlée, la fuite plasmatique impose un remplissage ' +
+      'précoce. La formule de référence prescrit **4 ml de Ringer lactate par kilo et par pourcent de ' +
+      'surface brûlée** sur les 24 premières heures, dont **la moitié durant les 8 premières heures** ' +
+      'et le reste sur les 16 suivantes, le compte partant de **l’heure de la brûlure** et non de ' +
+      'l’arrivée à l’hôpital. Ce n’est qu’un point de départ : l’ajustement se fait sur la **diurèse**, ' +
+      'maintenue autour de 0,5 à 1 ml/kg/h, meilleur indicateur d’un remplissage adéquat.' },
     { type: 'note', title: 'Estimer la surface brûlée', text:
       'La paume de la main de la victime, doigts inclus, représente environ **1 %** de sa surface ' +
       'corporelle : c’est le repère le plus simple sur le terrain. La règle des 9 de Wallace ' +
@@ -1150,7 +1283,7 @@ window.SECTIONS = [
       'menace la fonction rénale. Le passage transthoracique peut par ailleurs déclencher des troubles ' +
       'du rythme, y compris différés — ce qui justifie la surveillance systématique.' }
   ],
-  sources: ['erc-fa', 'ilcor-fa', 'rcuk-fa', 'tox']
+  sources: ['erc-fa', 'ilcor-fa', 'rcuk-fa', 'burns-path', 'parkland', 'tox']
 },
 
 {
@@ -1367,8 +1500,10 @@ window.SECTIONS = [
   ],
   complet: [
     { type: 'steps', title: 'Produit chimique dans l’œil', items: [
-      'Rincez **immédiatement** à l’eau courante tiède, sans attendre.',
-      'Rincez longuement — au moins 15 à 20 minutes — paupières maintenues ouvertes.',
+      'Rincez **immédiatement**, sans attendre : le délai avant le premier rinçage est le principal facteur pronostique.',
+      'Rincez **abondamment et longuement** — au minimum 20 à 30 minutes — paupières maintenues écartées de force, la personne tolérant mal l’ouverture.',
+      'Sérum physiologique si vous en avez, **sinon de l’eau** : ne retardez jamais le rinçage pour chercher le « bon » liquide.',
+      '**Continuez de rincer pendant le transport** — l’irrigation ne s’arrête pas à une durée fixe, mais quand le pH oculaire est redevenu normal, ce qui se contrôle à l’hôpital.',
       'Dirigez l’eau de l’angle interne vers l’extérieur, pour ne pas contaminer l’autre œil.',
       'Retirez les lentilles de contact si elles ne partent pas au rinçage.',
       'Appelez le {145} ou le {144} et gardez l’emballage du produit.',
@@ -1383,11 +1518,17 @@ window.SECTIONS = [
     ]},
     { type: 'steps', title: 'Dent définitive expulsée', items: [
       'Retrouvez la dent et saisissez-la par la **couronne**, jamais par la racine.',
-      'Si elle est sale, rincez-la brièvement au sérum physiologique ou au lait — **ne la frottez pas** et ne la brossez pas.',
-      'Si possible, **réimplantez-la immédiatement** dans son alvéole et faites mordre sur une compresse.',
-      'Sinon, conservez-la dans du **lait**, du sérum physiologique, ou dans la salive de la victime — jamais dans l’eau ni à sec.',
-      'Consultez un dentiste **en urgence** : le pronostic dépend directement du délai.'
+      'Si elle est sale, rincez-la **brièvement** (une dizaine de secondes) à l’eau froide courante ou au sérum physiologique — **ne la frottez pas**, ne la brossez pas, ne la désinfectez pas.',
+      'Si possible, **réimplantez-la immédiatement** dans son alvéole, dans le bon sens, et faites mordre sur une compresse.',
+      'Si la réimplantation est impossible, conservez-la **immergée**, par ordre de préférence : **lait** · sérum physiologique · salive de la victime (crachée dans un récipient).',
+      'Consultez un dentiste **en urgence**.'
     ]},
+    { type: 'warn', title: 'Le vrai ennemi, c’est le dessèchement — pas l’eau', text:
+      'Le facteur pronostique décisif est le **temps passé à sec** : au-delà d’environ **60 minutes** ' +
+      'hors de la bouche et à l’air libre, les cellules du ligament parodontal ne sont généralement ' +
+      'plus viables, quel que soit le milieu utilisé ensuite. L’eau du robinet est un **mauvais** ' +
+      'milieu de conservation, mais elle reste **préférable à laisser la dent sécher** : si vous ' +
+      'n’avez rien d’autre, immergez. Ne perdez pas de temps à chercher le liquide idéal.' },
     { type: 'warn', title: 'Dent de lait : ne pas réimplanter', text:
       'Une dent de lait expulsée ne se réimplante pas — cela risquerait de léser le germe de la dent ' +
       'définitive. Consultez tout de même un dentiste.' },
@@ -1415,7 +1556,7 @@ window.SECTIONS = [
       'intraoculaire. Le pansement bilatéral est anxiogène — expliquez ce que vous faites et restez ' +
       'en contact verbal permanent.' }
   ],
-  sources: ['erc-fa', 'rcuk-fa', 'tox']
+  sources: ['iadt', 'erc-fa', 'rcuk-fa', 'tox']
 },
 
 /* =========================================================================
@@ -1457,15 +1598,22 @@ window.SECTIONS = [
       'recherché.' },
     { type: 'steps', title: 'Gelures', items: [
       'Mettez la personne à l’abri et retirez ce qui comprime : bagues, chaussures serrées.',
-      'Réchauffez progressivement — contact peau à peau, ou bain d’eau tiède si vous pouvez contrôler la température.',
-      'Ne **frottez pas** et ne massez pas avec de la neige.',
+      'Protégez la zone, ne **frottez pas** et ne massez jamais avec de la neige.',
       'N’utilisez aucune source de chaleur directe : radiateur, feu, sèche-cheveux — la zone est insensible et brûle sans être ressentie.',
       'Ne **percez pas** les cloques.',
-      'Ne réchauffez **pas** si la zone risque de regeler avant l’arrivée aux secours — un cycle gel-dégel-regel est bien plus destructeur qu’un gel prolongé.',
-      'Protégez par un pansement non serré et consultez.'
+      'Protégez par un pansement non serré, séparez les doigts ou orteils, et évacuez.'
     ]},
-    { type: 'note', title: 'Traiter l’hypothermie avant les gelures', text:
-      'Si les deux coexistent, l’hypothermie générale prime : c’est elle qui met la vie en jeu.' }
+    { type: 'warn', title: 'Réchauffer sur le terrain : seulement sous deux conditions', text:
+      'Le réchauffement actif d’une gelure (bain d’eau tiède contrôlée) ne se justifie sur place que ' +
+      'si les soins définitifs sont à **plus de deux heures** **et** que vous pouvez garantir ' +
+      'l’absence de **regel**. Si le regel est possible, il est **plus sûr de laisser la zone gelée** : ' +
+      'un cycle gel–dégel–regel est nettement plus destructeur qu’un gel prolongé. Dans le doute, ' +
+      'protégez et évacuez sans réchauffer.' },
+    { type: 'note', title: 'Hypothermie d’abord', text:
+      'Une hypothermie **légère** peut être prise en charge en même temps que la gelure. Une ' +
+      'hypothermie **modérée ou sévère** doit être traitée **avant** : c’est elle qui met la vie en ' +
+      'jeu. Attention, réchauffer les extrémités d’une personne hypotherme aggrave l’afterdrop — ' +
+      'raison de plus pour ne pas commencer par les gelures.' }
   ],
   pro: [
     { type: 'prose', title: '« Personne n’est mort tant qu’il n’est pas chaud et mort »', text: [
@@ -1482,6 +1630,25 @@ window.SECTIONS = [
       'faire **baisser** encore la température centrale : c’est l’afterdrop. La vasodilatation ' +
       'associée peut par ailleurs provoquer un collapsus. Ces phénomènes justifient un réchauffement ' +
       'centré sur le tronc, progressif, et le maintien strict de l’horizontalité.' },
+    { type: 'table', title: 'Classification suisse de l’hypothermie (HT I–IV)', wide: true,
+      head: ['Stade', 'Tableau clinique', 'Température centrale indicative'],
+      rows: [
+        ['**HT I**',   'Conscient, **frissonne**', '35 – 32 °C'],
+        ['**HT II**',  'Conscience altérée, **ne frissonne plus**', '32 – 28 °C'],
+        ['**HT III**', 'Inconscient, signes vitaux présents', '28 – 24 °C'],
+        ['**HT IV**',  'Mort apparente — **réanimation possible**', 'inférieure à 24 °C']
+      ]},
+    { type: 'prose', title: 'Ce que cette classification apporte sur le terrain', text: [
+      'Développée pour la médecine de montagne et reprise internationalement, elle permet de **stader ' +
+      'sans thermomètre central**, à partir du seul examen clinique — ce qui est précisément la ' +
+      'situation du secouriste. Elle donne aussi sa portée au repère le plus contre-intuitif : ' +
+      'l’arrêt des frissons marque le passage de HT I à HT II, donc une **aggravation**, jamais une ' +
+      'amélioration.',
+      'La version révisée par l’ICAR MedCom raisonne désormais en **risque d’arrêt cardiaque** plutôt ' +
+      'qu’en température, s’appuie sur le niveau de réactivité (échelle AVPU) et abandonne le frisson ' +
+      'comme critère — parce que la réponse physiologique au froid varie fortement d’un individu à ' +
+      'l’autre. Les températures ci-dessus restent indicatives et se chevauchent en pratique.'
+    ]},
     { type: 'note', title: 'Signes vitaux difficiles à percevoir', text:
       'En hypothermie sévère, la bradycardie extrême et la vasoconstriction rendent le pouls et la ' +
       'respiration très difficiles à détecter. Les recommandations prévoient de prolonger ' +
@@ -1493,7 +1660,7 @@ window.SECTIONS = [
       'lésion d’ischémie-reperfusion. Un nouveau gel après dégel amplifie considérablement les ' +
       'dégâts : d’où la règle de ne pas réchauffer sans pouvoir garantir l’absence de regel.' }
   ],
-  sources: ['erc-sc', 'erc-fa', 'rcuk-fa', 'rega']
+  sources: ['swiss-ht', 'wms-hypothermia', 'wms-frostbite', 'erc-sc', 'erc-fa', 'rcuk-fa', 'rega']
 },
 
 {
@@ -1586,12 +1753,12 @@ window.SECTIONS = [
       'Retirez les vêtements mouillés et isolez du sol dès que possible — l’hypothermie est quasi constante.',
       'Utilisez un DAE dès qu’il est disponible, après avoir séché la poitrine.'
     ]},
-    { type: 'note', title: 'Compressions ou insufflations d’abord ?', text:
-      'La noyade provoque un arrêt par **manque d’oxygène**, ce qui donne à la ventilation une ' +
-      'importance particulière. Les recommandations 2025 distinguent deux cas : les **secouristes ' +
-      'formés** et les professionnels du sauvetage envisagent de commencer par les **insufflations** ; ' +
-      'le **grand public** applique la séquence habituelle en commençant par les **compressions**, ' +
-      'pour rester simple et cohérent avec la formation reçue. Dans tous les cas : commencez.' },
+    { type: 'good', title: 'En Suisse : commencer par 5 insufflations', text:
+      'Les directives de cours du **SRC** rangent la noyade avec le nourrisson et l’enfant : si vous ' +
+      'êtes capable de ventiler, **commencez par cinq insufflations initiales**, puis alternez ' +
+      '30 compressions / 2 insufflations. La noyade provoque un arrêt par **manque d’oxygène** — ' +
+      'réoxygéner traite la cause. Si vous ne pouvez pas ou ne voulez pas insuffler, faites des ' +
+      '**compressions seules** : c’est très largement préférable à ne rien faire.' },
     { type: 'warn', title: 'Ne cherchez pas à vider l’eau des poumons', text:
       'Aucune manœuvre destinée à évacuer l’eau — compression abdominale, victime tête en bas, ' +
       'retournement — n’est efficace. Elles retardent la réanimation et provoquent des ' +
@@ -1615,13 +1782,19 @@ window.SECTIONS = [
       'choquables prédominent et pourquoi la ventilation occupe une place que l’arrêt cardiaque ' +
       'classique ne lui donne pas.'
     ]},
-    { type: 'prose', title: 'Pourquoi deux recommandations différentes', text:
-      'Le raisonnement de l’ILCOR est explicitement un arbitrage entre bénéfice physiologique et ' +
-      'simplicité opérationnelle. Aucune étude humaine directe ne compare les deux séquences ; les ' +
-      'travaux sur mannequin montrent que la stratégie compression-first ne retarde la première ' +
-      'ventilation que de quelques secondes. Pour le grand public, la cohérence avec la formation ' +
-      'standard l’emporte ; pour les intervenants formés au sauvetage aquatique, le bénéfice attendu ' +
-      'de la ventilation précoce l’emporte. Le niveau de preuve est faible dans les deux cas.' },
+    { type: 'prose', title: 'Pourquoi les référentiels ne disent pas tous la même chose', text: [
+      'L’ILCOR arbitre entre bénéfice physiologique et simplicité opérationnelle. Sa formulation ' +
+      'internationale recommande une stratégie **compression-first (CAB)** pour le grand public — ' +
+      'par souci de cohérence avec la formation standard — et invite les professionnels et les ' +
+      'sauveteurs aquatiques à envisager les **ventilations d’abord (ABC)** s’ils y sont formés.',
+      'Le **SRC**, lui, a tranché plus simplement pour la Suisse : la noyade rejoint le nourrisson et ' +
+      'l’enfant dans la catégorie « cinq insufflations initiales » dès lors que le secouriste sait ' +
+      'ventiler. C’est ce référentiel qui s’applique ici. Aucune étude humaine directe ne compare les ' +
+      'deux séquences ; les travaux sur mannequin montrent que la stratégie compression-first ne ' +
+      'retarde la première ventilation que de quelques secondes. Le niveau de preuve est faible dans ' +
+      'les deux cas — ce qui explique que des organismes sérieux aboutissent à des consignes ' +
+      'différentes sans que l’un ait tort.'
+    ]},
     { type: 'note', title: 'Eau douce et eau salée', text:
       'La distinction, longtemps enseignée pour ses effets osmotiques théoriques, n’a pas de ' +
       'conséquence pratique en réanimation : le volume réellement inhalé est le plus souvent faible. ' +
@@ -1631,7 +1804,7 @@ window.SECTIONS = [
       'protectrice, en particulier chez l’enfant en eau très froide, et justifie une réanimation ' +
       'prolongée avec réchauffement avant toute décision d’arrêt.' }
   ],
-  sources: ['ilcor-drown', 'erc-sc', 'erc-bls', 'rcuk-fa']
+  sources: ['src', 'ilcor-drown', 'erc-sc', 'erc-bls', 'rcuk-fa']
 },
 
 {
@@ -1929,6 +2102,11 @@ window.SECTIONS = [
       'Plusieurs applications et cartes cantonales recensent les DAE et alertent les secouristes volontaires à proximité — renseignez-vous sur le dispositif de votre canton.',
       'Ne partez chercher un DAE que si vous n’êtes pas seul : sinon, restez et massez.'
     ]},
+    { type: 'warn', title: 'Le problème n’est pas le nombre de DAE', text:
+      'Dans le canton de Fribourg entre 2018 et 2022, **549 DAE** étaient enregistrés — et pourtant ' +
+      'un défibrillateur n’a été utilisé **avant l’arrivée des secours que dans 19 % des arrêts ' +
+      'cardiaques**. Les appareils sont là ; ce qui manque, c’est de savoir où ils sont et d’oser ' +
+      's’en servir. D’où l’intérêt de les repérer maintenant, pas le jour où il faudra.' },
     { type: 'note', title: 'Un DAE ne peut pas se tromper', text:
       'L’appareil analyse le rythme et **ne délivre un choc que s’il est indiqué**. Il est ' +
       'impossible de choquer quelqu’un qui ne doit pas l’être. C’est la raison pour laquelle un DAE ' +
@@ -1971,7 +2149,7 @@ window.SECTIONS = [
       'précise n’est plus recommandée. Les chiffres de la réanimation adulte — 30:2, 100–120/min, ' +
       '5–6 cm — sont **inchangés**.' }
   ],
-  sources: ['src-gl', 'src', 'samariter', 'erc-bls', 'erc-pls']
+  sources: ['ohca-fr', 'src-gl', 'src', 'samariter', 'erc-bls', 'erc-pls']
 },
 
 {
@@ -1989,6 +2167,7 @@ window.SECTIONS = [
       'Placez-vous à sa hauteur, établissez un contact visuel, parlez calmement et lentement.',
       'Protégez son intimité : écartez les curieux, empêchez les photos.',
       'Écoutez sans juger, sans minimiser (« ce n’est rien »), sans promettre ce que vous ne maîtrisez pas (« tout ira bien »).',
+      'Ne la poussez **pas** à raconter ce qui s’est passé ni à exprimer ses émotions : écoutez si elle parle, mais ne sollicitez pas le récit.',
       'Dites la vérité simplement : « je ne sais pas, mais les secours arrivent ».',
       'Maintenez le contact physique seulement s’il est accepté et approprié.',
       'Répondez aux besoins concrets : couvrir, boire si autorisé, prévenir un proche, s’occuper des enfants ou d’un animal.',
@@ -2017,10 +2196,16 @@ window.SECTIONS = [
       'Il s’agit d’un soutien humain immédiat : sécurité, information, réconfort, mise en lien avec ' +
       'les proches et les ressources. Ce n’est pas une thérapie, cela ne nécessite pas de faire ' +
       'raconter l’événement, et cela ne doit rien forcer.',
-      'Le **débriefing psychologique** systématique et immédiat, longtemps pratiqué, n’est plus ' +
-      'recommandé : imposé à tous, il n’améliore pas les suites et peut les aggraver chez certaines ' +
-      'personnes. L’approche actuelle privilégie un soutien disponible et un dépistage des ' +
-      'personnes qui ne récupèrent pas.'
+      'Le **débriefing psychologique** en séance unique, systématiquement proposé après un événement, ' +
+      'a longtemps été la norme et n’est aujourd’hui **plus recommandé**. La revue Cochrane ne ' +
+      'retrouve aucun bénéfice sur la prévention du trouble de stress post-traumatique ni sur la ' +
+      'détresse psychologique, et un essai a même montré un **risque accru** de TSPT à un an. L’OMS ' +
+      'ne le recommande pas. L’approche actuelle est le dépistage puis le traitement de ceux qui ne ' +
+      'récupèrent pas — pas l’intervention systématique sur tout le monde.',
+      'Une différence pratique en découle, souvent mal comprise : les premiers secours ' +
+      'psychologiques **n’encouragent pas** la personne à raconter l’événement ni à exprimer ses ' +
+      'émotions. On offre sécurité, information et présence ; on écoute si elle parle ; on ne ' +
+      'sollicite pas le récit.'
     ]},
     { type: 'prose', title: 'Réaction normale et trouble constitué', text:
       'Les réactions de stress aigu — reviviscences, hypervigilance, évitement, troubles du sommeil, ' +
@@ -2037,7 +2222,7 @@ window.SECTIONS = [
       'et peuvent être engagées par les centrales d’alarme pour les victimes, les proches et les ' +
       'témoins. Vous pouvez le demander lors de l’appel, ou après coup auprès de votre médecin.' }
   ],
-  sources: ['erc-fa', 'rcuk-fa', 'samariter']
+  sources: ['cochrane-debrief', 'erc-fa', 'rcuk-fa', 'samariter']
 }
 
 ];

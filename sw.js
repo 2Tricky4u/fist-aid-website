@@ -8,7 +8,7 @@
 
 /* Bump this on every content or asset release: a new name forces a fresh
    precache on install and drops the old one on activate. */
-var CACHE = 'psch-v4';
+var CACHE = 'psch-v8';
 
 var ASSETS = [
   './',

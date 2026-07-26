@@ -108,6 +108,95 @@ window.SOURCES = {
     checked: '2026-07-26'
   },
 
+  'swiss-ht': {
+    org: 'ICAR MedCom — Commission internationale de médecine d’urgence en montagne',
+    title: 'Clinical staging of accidental hypothermia: The Revised Swiss System',
+    ref: 'Resuscitation 2021 ; classification suisse HT I–IV, révisée selon le risque d’arrêt cardiaque',
+    url: 'https://www.resuscitationjournal.com/article/S0300-9572(21)00096-4/fulltext',
+    checked: '2026-07-26'
+  },
+
+  'saver': {
+    org: 'Saver JL — Stroke (American Heart Association)',
+    title: 'Time Is Brain — Quantified',
+    ref: 'Stroke 2006;37:263–266',
+    url: 'https://www.ahajournals.org/doi/10.1161/01.str.0000196957.55928.ab',
+    checked: '2026-07-26'
+  },
+
+  'saver-variability': {
+    org: 'Stroke (American Heart Association)',
+    title: 'High Variability in Neuronal Loss — nuance apportée à l’estimation de Saver',
+    url: 'https://www.ahajournals.org/doi/10.1161/STROKEAHA.118.023499',
+    checked: '2026-07-26'
+  },
+
+  'three-phase': {
+    org: 'Resuscitation Plus',
+    title: 'Time boundaries of the three-phase time-sensitive model for ventricular fibrillation cardiac arrest',
+    ref: 'D’après le modèle de Weisfeldt & Becker (JAMA 2002)',
+    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8244403/',
+    checked: '2026-07-26'
+  },
+
+  'capno': {
+    org: 'Resuscitation',
+    title: 'Capnography during cardiac arrest',
+    url: 'https://www.cercp.org/wp-content/uploads/2018/11/noviembre_2018_articulo.pdf',
+    checked: '2026-07-26'
+  },
+
+  'burns-path': {
+    org: 'Royal College of Emergency Medicine (RCEMLearning)',
+    title: 'Major trauma — Burns : physiopathologie, zones de Jackson, remplissage',
+    url: 'https://www.rcemlearning.co.uk/reference/major-trauma-burns/',
+    checked: '2026-07-26'
+  },
+
+  'parkland': {
+    org: 'StatPearls / NCBI Bookshelf',
+    title: 'Parkland Formula',
+    url: 'https://www.ncbi.nlm.nih.gov/books/NBK537190/',
+    checked: '2026-07-26'
+  },
+
+  'iadt': {
+    org: 'International Association of Dental Traumatology (IADT)',
+    title: 'Guidelines for the management of traumatic dental injuries — 2. Avulsion of permanent teeth',
+    ref: 'Dental Traumatology 2020',
+    url: 'https://onlinelibrary.wiley.com/doi/10.1111/edt.12573',
+    checked: '2026-07-26'
+  },
+
+  'wms-frostbite': {
+    org: 'Wilderness Medical Society',
+    title: 'Clinical Practice Guidelines for the Prevention and Treatment of Frostbite — 2024 Update',
+    url: 'https://journals.sagepub.com/doi/10.1177/10806032231222359',
+    checked: '2026-07-26'
+  },
+
+  'wms-hypothermia': {
+    org: 'Wilderness Medical Society / AAFP',
+    title: 'Accidental Hypothermia — Guidelines from the Wilderness Medical Society',
+    url: 'https://www.aafp.org/pubs/afp/issues/2020/1101/p571.html',
+    checked: '2026-07-26'
+  },
+
+  'cochrane-debrief': {
+    org: 'Cochrane',
+    title: 'Psychological debriefing for preventing post-traumatic stress disorder (PTSD)',
+    ref: 'Rose S et al., Cochrane Database Syst Rev, CD000560',
+    url: 'https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD000560/abstract',
+    checked: '2026-07-26'
+  },
+
+  'bts-sign': {
+    org: 'British Thoracic Society / SIGN',
+    title: 'British guideline on the management of asthma',
+    url: 'https://www.brit-thoracic.org.uk/document-library/guidelines/asthma/btssign-asthma-guideline-quick-reference-guide-2019/',
+    checked: '2026-07-26'
+  },
+
   'anzcor-bleed': {
     org: 'ANZCOR (Australian and New Zealand Committee on Resuscitation)',
     title: 'Guideline 9.1.1 — First Aid for Management of Bleeding',
@@ -122,6 +211,29 @@ window.SOURCES = {
     title: 'Numéro d’urgence 145 — conseils en cas d’intoxication, 24 h/24',
     ref: 'Depuis l’étranger : +41 44 251 51 51',
     url: 'https://www.toxinfo.ch/notruf-145_fr',
+    checked: '2026-07-26'
+  },
+
+  'ias': {
+    org: 'IAS / IVR — Interassociation de sauvetage',
+    title: 'Directives sur les délais d’intervention : au maximum 15 minutes, reprises dans la législation de certains cantons',
+    ref: 'Norme d’organisation, et non un temps moyen mesuré',
+    url: 'https://www.trisan.org/fr/themes/aide-medicale-urgente/articles/les-secours-durgence-comment-sauve-t-on-de-lautre-cote-de-la-frontiere',
+    checked: '2026-07-26'
+  },
+
+  'ohca-fr': {
+    org: 'Registre suisse de l’arrêt cardiaque / Resuscitation Plus',
+    title: 'Geospatial mapping of disparities in out-of-hospital cardiac arrests in the Swiss canton of Fribourg, 2018–2022',
+    ref: '1127 arrêts cardiaques extrahospitaliers ; délai de l’appel 144 à l’arrivée du premier véhicule',
+    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12446618/',
+    checked: '2026-07-26'
+  },
+
+  'notrufe-ch': {
+    org: 'Appels d’urgence Suisse / 144.ch',
+    title: 'Numéros d’urgence en Suisse — le 112 aboutit à la centrale de police',
+    url: 'https://www.144.ch/fr/informationen-des-steuerungsausschuss-der-organisation-notrufe-schweiz-zum-thema-kommunikation-der-europaeischen-notrufnummer-112/',
     checked: '2026-07-26'
   },
 
