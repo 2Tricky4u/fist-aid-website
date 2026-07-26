@@ -17,23 +17,57 @@
 
 window.FIGURES = {
 
-/* ---------- Point de compression et posture ---------- */
+/* ---------- Point de compression ---------- */
 'compression': {
-  title: 'Repère anatomique du point de compression thoracique',
-  viewBox: '0 0 420 150',
+  title: 'Où placer les mains sur le thorax',
+  viewBox: '0 0 420 250',
   svg: `
   <g>
-    <text class="t" x="10" y="18">Où appuyer, moitié inférieure du sternum</text>
-    <path class="s f" d="M100 46 Q150 40 200 46 L206 128 Q150 156 94 128 Z"/>
-    <path class="s" d="M150 44 L150 132"/>
-    <path class="s" d="M112 62 Q150 70 188 62"/>
-    <path class="s" d="M106 82 Q150 92 194 82"/>
-    <path class="s" d="M104 102 Q150 112 196 102"/>
-    <circle class="sa fa" cx="150" cy="106" r="17"/>
-    <path class="sa" d="M150 96 L150 116 M140 106 L160 106"/>
-    <path class="d" d="M150 106 L232 106"/>
-    <text class="t" x="238" y="102">Talon de la main ici,</text>
-    <text class="t" x="238" y="118">seconde main par-dessus</text>
+    <path class="s f" d="M62 44 Q140 26 218 44 L212 226 Q140 240 68 226 Z"/>
+    <path class="s" d="M78 48 Q108 62 131 64"/>
+    <path class="s" d="M202 48 Q172 62 149 64"/>
+    <path class="s" d="M131 60 Q140 66 149 60"/>
+
+    <rect class="s froad" x="130" y="64" width="20" height="86" rx="2"/>
+
+    <path class="s" d="M130 78 Q104 82 84 94"/>
+    <path class="s" d="M130 96 Q100 102 76 118"/>
+    <path class="s" d="M130 114 Q100 122 76 144"/>
+    <path class="s" d="M150 78 Q176 82 196 94"/>
+    <path class="s" d="M150 96 Q180 102 204 118"/>
+    <path class="s" d="M150 114 Q180 122 204 144"/>
+    <path class="s" d="M136 150 Q108 164 86 186"/>
+    <path class="s" d="M144 150 Q172 164 194 186"/>
+
+    <rect class="sa fa" x="122" y="106" width="36" height="46" rx="7"/>
+    <ellipse class="sa fa" cx="140" cy="129" rx="27" ry="19"/>
+    <path class="sa" d="M126 122 L154 122 M126 136 L154 136"/>
+
+    <path class="dw" d="M60 124 L220 124"/>
+    <circle class="dw" cx="92" cy="124" r="3.5"/>
+    <circle class="dw" cx="188" cy="124" r="3.5"/>
+
+    <path class="s" d="M136 152 L140 166 L144 152"/>
+    <g transform="translate(150,158)">
+      <circle class="sa" cx="9" cy="9" r="9" fill="none"/>
+      <path class="sa" d="M3 3 L15 15"/>
+    </g>
+
+    <path class="d" d="M167 129 L246 108"/>
+    <path class="d" d="M170 160 L246 152"/>
+    <path class="dw" d="M212 124 L246 196"/>
+
+    <text class="t" x="252" y="98">Moitié inférieure</text>
+    <text class="t" x="252" y="114">du sternum</text>
+    <text class="t2" x="252" y="130">le talon de la main ici,</text>
+    <text class="t2" x="252" y="144">la seconde par-dessus</text>
+
+    <text class="t" x="252" y="172">Appendice xiphoïde</text>
+    <text class="t2" x="252" y="186">ne pas comprimer</text>
+
+    <text class="tw" x="252" y="208">Ligne des tétons :</text>
+    <text class="tw" x="252" y="222">repère non fiable,</text>
+    <text class="tw" x="252" y="236">à ne pas utiliser</text>
   </g>`
 },
 

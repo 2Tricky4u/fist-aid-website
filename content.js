@@ -371,8 +371,18 @@ window.SECTIONS = [
       alt: 'Photographie : une secouriste comprime le thorax d’un homme allongé sur le dos, les mains superposées au milieu de la poitrine, bras tendus et épaules à la verticale des mains. Un défibrillateur est posé à côté de la victime, une électrode déjà collée sur le flanc gauche.',
       caption: 'Bras tendus, épaules au-dessus des mains, poussée avec le poids du buste et non avec les bras. Le DAE reste allumé et connecté pendant les compressions.',
       credit: '© Swiss Resuscitation Council SRC, reproduit avec autorisation.' },
-    { type: 'figure', name: 'compression', wide: true, title: 'Point de compression et posture',
-      caption: 'Le repère « milieu de la poitrine » suffit : inutile de chercher un point anatomique précis, cela ne fait que retarder le premier appui.' },
+    { type: 'figure', name: 'compression', wide: true, title: 'Où placer les mains',
+      caption: 'Le repère est le **milieu de la poitrine**, sur la moitié inférieure du sternum. Il est **identique chez l’homme et chez la femme**. Inutile de chercher un point anatomique précis : cela ne fait que retarder le premier appui.' },
+    { type: 'myth', title: 'Idée reçue : « la ligne des tétons », ou « le V des côtes puis deux ou trois doigts »', text:
+      'Ces deux repères ont été enseignés, puis **abandonnés**, et aucun des deux ne distingue les ' +
+      'hommes des femmes : **il n’existe aucune différence de point de compression selon le sexe** ' +
+      'dans les directives. La **ligne des tétons** place la main sur l’**appendice xiphoïde dans ' +
+      'près de la moitié des cas**, avec un risque de lésion des organes sous-jacents ; la déviation ' +
+      'est d’ailleurs plus fréquente chez les femmes âgées ou de petite taille. Le repérage par le ' +
+      '**rebord costal remonté jusqu’au sternum** figurait dans les anciennes directives : il a été ' +
+      'retiré parce que les secouristes, professionnels compris, peinent à l’identifier, ce qui ' +
+      '**retarde la première compression** et réduit le nombre de compressions par minute. La ' +
+      'consigne actuelle tient en trois mots : **milieu de la poitrine**.' },
     { type: 'image', wide: true, src: 'planches/dae-electrodes.jpg',
       title: 'Pose des électrodes',
       alt: 'Photographie : une secouriste applique une électrode adhésive de défibrillateur sur le flanc gauche d’un homme torse nu allongé sur le dos, sous l’aisselle. L’appareil est posé près de la tête de la victime.',
@@ -478,7 +488,7 @@ window.SECTIONS = [
       'sous tension, toxiques), puis soins post-arrêt avec contrôle ciblé de la température et ' +
       'évaluation neurologique différée.' }
   ],
-  sources: ['erc-bls', 'src', 'rcuk-bls', 'erc-exec', 'three-phase', 'capno']
+  sources: ['erc-bls', 'src', 'rcuk-bls', 'erc-exec', 'three-phase', 'capno', 'inl-safety', 'inl-assess']
 },
 
 {

@@ -169,6 +169,21 @@ window.SOURCES = {
     checked: '2026-07-26'
   },
 
+  'inl-safety': {
+    org: 'Resuscitation',
+    title: 'Safety of the inter-nipple line hand position landmark for chest compression',
+    ref: 'La ligne des tétons place la main sur l’appendice xiphoïde dans près de la moitié des cas',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/19647360/',
+    checked: '2026-07-27'
+  },
+
+  'inl-assess': {
+    org: 'Resuscitation',
+    title: 'Basic life support providers’ assessment of centre of the chest and inter-nipple line for hand position and their underlying anatomical structures',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/21075499/',
+    checked: '2026-07-27'
+  },
+
   'three-phase': {
     org: 'Resuscitation Plus',
     title: 'Time boundaries of the three-phase time-sensitive model for ventricular fibrillation cardiac arrest',
