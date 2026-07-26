@@ -14,7 +14,7 @@ window.SOURCES = {
 
   'erc-bls': {
     org: 'European Resuscitation Council',
-    title: 'Guidelines 2025 — Adult Basic Life Support',
+    title: 'Guidelines 2025, Adult Basic Life Support',
     ref: 'Resuscitation 2025;215(Suppl 1):110771',
     url: 'https://www.resuscitationjournal.com/article/S0300-9572(25)00283-7/fulltext',
     checked: '2026-07-26'
@@ -22,7 +22,7 @@ window.SOURCES = {
 
   'erc-pls': {
     org: 'European Resuscitation Council',
-    title: 'Guidelines 2025 — Paediatric Life Support',
+    title: 'Guidelines 2025, Paediatric Life Support',
     ref: 'Resuscitation 2025;215(Suppl 1)',
     url: 'https://www.resuscitationjournal.com/article/S0300-9572(25)00279-5/fulltext',
     checked: '2026-07-26'
@@ -30,7 +30,7 @@ window.SOURCES = {
 
   'erc-fa': {
     org: 'European Resuscitation Council',
-    title: 'Guidelines 2025 — First Aid',
+    title: 'Guidelines 2025, First Aid',
     ref: 'Resuscitation 2025;215(Suppl 1)',
     url: 'https://www.resuscitationjournal.com/article/S0300-9572(25)00264-3/fulltext',
     checked: '2026-07-26'
@@ -38,7 +38,7 @@ window.SOURCES = {
 
   'erc-sc': {
     org: 'European Resuscitation Council',
-    title: 'Guidelines 2025 — Special Circumstances in Resuscitation',
+    title: 'Guidelines 2025, Special Circumstances in Resuscitation',
     ref: 'Resuscitation 2025;215(Suppl 1)',
     url: 'https://www.resuscitationjournal.com/article/S0300-9572(25)00265-5/fulltext',
     checked: '2026-07-26'
@@ -46,7 +46,7 @@ window.SOURCES = {
 
   'erc-exec': {
     org: 'European Resuscitation Council',
-    title: 'Guidelines 2025 — Executive Summary',
+    title: 'Guidelines 2025, Executive Summary',
     ref: 'Resuscitation 2025;215(Suppl 1)',
     url: 'https://www.resuscitationjournal.com/article/S0300-9572(25)00282-5/fulltext',
     checked: '2026-07-26'
@@ -63,7 +63,7 @@ window.SOURCES = {
 
   'ilcor-drown': {
     org: 'ILCOR',
-    title: 'CoSTR — CAB or ABC in drowning (BLS 856, systematic review)',
+    title: 'CoSTR, CAB or ABC in drowning (BLS 856, systematic review)',
     url: 'https://costr.ilcor.org/document/cab-or-abc-in-drowning-bls-856-tf-systematic-review',
     checked: '2026-07-26'
   },
@@ -79,7 +79,7 @@ window.SOURCES = {
 
   'src-gl': {
     org: 'Swiss Resuscitation Council (SRC)',
-    title: 'Guidelines 2025 — reprise des directives ERC/AHA pour la Suisse',
+    title: 'Guidelines 2025, reprise des directives ERC/AHA pour la Suisse',
     ref: 'Période de transition jusqu’au 31.12.2026',
     url: 'https://www.resuscitation.ch/guidelines-2025',
     checked: '2026-07-26'
@@ -109,7 +109,7 @@ window.SOURCES = {
   },
 
   'crash3': {
-    org: 'CRASH-3 Collaborators — The Lancet',
+    org: 'CRASH-3 Collaborators, The Lancet',
     title: 'Effects of tranexamic acid on death, disability and vascular occlusive events in acute traumatic brain injury (CRASH-3)',
     ref: 'Lancet 2019 ; bénéfice dans les 3 heures, traumatisme crânien léger à modéré',
     url: 'https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32233-0/fulltext',
@@ -126,7 +126,7 @@ window.SOURCES = {
 
   'co-poisoning': {
     org: 'StatPearls / NCBI Bookshelf',
-    title: 'Carbon Monoxide Poisoning — demi-vie de la carboxyhémoglobine et oxygénothérapie',
+    title: 'Carbon Monoxide Poisoning, demi-vie de la carboxyhémoglobine et oxygénothérapie',
     url: 'https://www.ncbi.nlm.nih.gov/books/NBK557888/',
     checked: '2026-07-26'
   },
@@ -141,13 +141,13 @@ window.SOURCES = {
 
   'monro-kellie': {
     org: 'Journal of Cerebral Blood Flow & Metabolism',
-    title: 'Monro-Kellie 2.0 — the dynamic vascular and venous pathophysiological components of intracranial pressure',
+    title: 'Monro-Kellie 2.0, the dynamic vascular and venous pathophysiological components of intracranial pressure',
     url: 'https://journals.sagepub.com/doi/pdf/10.1177/0271678x16648711',
     checked: '2026-07-26'
   },
 
   'swiss-ht': {
-    org: 'ICAR MedCom — Commission internationale de médecine d’urgence en montagne',
+    org: 'ICAR MedCom, Commission internationale de médecine d’urgence en montagne',
     title: 'Clinical staging of accidental hypothermia: The Revised Swiss System',
     ref: 'Resuscitation 2021 ; classification suisse HT I–IV, révisée selon le risque d’arrêt cardiaque',
     url: 'https://www.resuscitationjournal.com/article/S0300-9572(21)00096-4/fulltext',
@@ -155,8 +155,8 @@ window.SOURCES = {
   },
 
   'saver': {
-    org: 'Saver JL — Stroke (American Heart Association)',
-    title: 'Time Is Brain — Quantified',
+    org: 'Saver JL, Stroke (American Heart Association)',
+    title: 'Time Is Brain : Quantified',
     ref: 'Stroke 2006;37:263–266',
     url: 'https://www.ahajournals.org/doi/10.1161/01.str.0000196957.55928.ab',
     checked: '2026-07-26'
@@ -164,7 +164,7 @@ window.SOURCES = {
 
   'saver-variability': {
     org: 'Stroke (American Heart Association)',
-    title: 'High Variability in Neuronal Loss — nuance apportée à l’estimation de Saver',
+    title: 'High Variability in Neuronal Loss, nuance apportée à l’estimation de Saver',
     url: 'https://www.ahajournals.org/doi/10.1161/STROKEAHA.118.023499',
     checked: '2026-07-26'
   },
@@ -186,7 +186,7 @@ window.SOURCES = {
 
   'burns-path': {
     org: 'Royal College of Emergency Medicine (RCEMLearning)',
-    title: 'Major trauma — Burns : physiopathologie, zones de Jackson, remplissage',
+    title: 'Major trauma, Burns : physiopathologie, zones de Jackson, remplissage',
     url: 'https://www.rcemlearning.co.uk/reference/major-trauma-burns/',
     checked: '2026-07-26'
   },
@@ -200,7 +200,7 @@ window.SOURCES = {
 
   'iadt': {
     org: 'International Association of Dental Traumatology (IADT)',
-    title: 'Guidelines for the management of traumatic dental injuries — 2. Avulsion of permanent teeth',
+    title: 'Guidelines for the management of traumatic dental injuries : 2. Avulsion of permanent teeth',
     ref: 'Dental Traumatology 2020',
     url: 'https://onlinelibrary.wiley.com/doi/10.1111/edt.12573',
     checked: '2026-07-26'
@@ -208,14 +208,14 @@ window.SOURCES = {
 
   'wms-frostbite': {
     org: 'Wilderness Medical Society',
-    title: 'Clinical Practice Guidelines for the Prevention and Treatment of Frostbite — 2024 Update',
+    title: 'Clinical Practice Guidelines for the Prevention and Treatment of Frostbite : 2024 Update',
     url: 'https://journals.sagepub.com/doi/10.1177/10806032231222359',
     checked: '2026-07-26'
   },
 
   'wms-hypothermia': {
     org: 'Wilderness Medical Society / AAFP',
-    title: 'Accidental Hypothermia — Guidelines from the Wilderness Medical Society',
+    title: 'Accidental Hypothermia, Guidelines from the Wilderness Medical Society',
     url: 'https://www.aafp.org/pubs/afp/issues/2020/1101/p571.html',
     checked: '2026-07-26'
   },
@@ -237,7 +237,7 @@ window.SOURCES = {
 
   'anzcor-bleed': {
     org: 'ANZCOR (Australian and New Zealand Committee on Resuscitation)',
-    title: 'Guideline 9.1.1 — First Aid for Management of Bleeding',
+    title: 'Guideline 9.1.1, First Aid for Management of Bleeding',
     url: 'https://www.anzcor.org/home/first-aid-management-of-injuries/guideline-9-1-1-first-aid-for-management-of-bleeding',
     checked: '2026-07-26'
   },
@@ -246,14 +246,14 @@ window.SOURCES = {
 
   'tox': {
     org: 'Tox Info Suisse',
-    title: 'Numéro d’urgence 145 — conseils en cas d’intoxication, 24 h/24',
+    title: 'Numéro d’urgence 145, conseils en cas d’intoxication, 24 h/24',
     ref: 'Depuis l’étranger : +41 44 251 51 51',
     url: 'https://www.toxinfo.ch/notruf-145_fr',
     checked: '2026-07-26'
   },
 
   'ias': {
-    org: 'IAS / IVR — Interassociation de sauvetage',
+    org: 'IAS / IVR, Interassociation de sauvetage',
     title: 'Directives sur les délais d’intervention : au maximum 15 minutes, reprises dans la législation de certains cantons',
     ref: 'Norme d’organisation, et non un temps moyen mesuré',
     url: 'https://www.trisan.org/fr/themes/aide-medicale-urgente/articles/les-secours-durgence-comment-sauve-t-on-de-lautre-cote-de-la-frontiere',
@@ -270,13 +270,13 @@ window.SOURCES = {
 
   'notrufe-ch': {
     org: 'Appels d’urgence Suisse / 144.ch',
-    title: 'Numéros d’urgence en Suisse — le 112 aboutit à la centrale de police',
+    title: 'Numéros d’urgence en Suisse, le 112 aboutit à la centrale de police',
     url: 'https://www.144.ch/fr/informationen-des-steuerungsausschuss-der-organisation-notrufe-schweiz-zum-thema-kommunikation-der-europaeischen-notrufnummer-112/',
     checked: '2026-07-26'
   },
 
   'rega': {
-    org: 'Rega — Garde aérienne suisse de sauvetage',
+    org: 'Rega, Garde aérienne suisse de sauvetage',
     title: 'Alarme 1414 et application Rega',
     url: 'https://www.rega.ch/fr',
     checked: '2026-07-26'
@@ -291,7 +291,7 @@ window.SOURCES = {
 
   'cp-128': {
     org: 'Confédération suisse',
-    title: 'Code pénal suisse, art. 128 — Omission de prêter secours',
+    title: 'Code pénal suisse, art. 128, Omission de prêter secours',
     ref: 'RS 311.0 ; peine privative de liberté de 3 ans au plus ou peine pécuniaire',
     url: 'https://www.fedlex.admin.ch/eli/cc/54/757_781_799/fr',
     checked: '2026-07-26'
@@ -314,7 +314,7 @@ window.SOURCES = {
 
   'swissheart': {
     org: 'Fondation Suisse de Cardiologie',
-    title: 'Reconnaître l’infarctus et l’attaque cérébrale — signes d’alerte',
+    title: 'Reconnaître l’infarctus et l’attaque cérébrale : signes d’alerte',
     url: 'https://www.swissheart.ch/fr',
     checked: '2026-07-26'
   }

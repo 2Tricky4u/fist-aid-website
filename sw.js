@@ -1,5 +1,5 @@
 /* =========================================================================
-   Service worker — offline first.
+   Service worker : offline first.
 
    A first-aid reference is needed exactly when there is no signal: in a
    basement, a tunnel, a mountain valley. Everything is precached on install
@@ -8,7 +8,7 @@
 
 /* Bump this on every content or asset release: a new name forces a fresh
    precache on install and drops the old one on activate. */
-var CACHE = 'psch-v17';
+var CACHE = 'psch-v28';
 
 var ASSETS = [
   './',
@@ -21,6 +21,21 @@ var ASSETS = [
   './manifest.json'
 ];
 
+/* Planches sous licence déposées dans planches/. Elles sont facultatives :
+   listez ici celles que vous ajoutez. Contrairement à ASSETS, un fichier absent
+   n'empêche pas l'installation du service worker. */
+var PLATES = [
+  './planches/rcp-mains.jpg',
+  './planches/dae-electrodes.jpg',
+  './planches/alerter-144.jpg',
+  './planches/accident-rcp.jpg',
+  './planches/compression-plaie.jpg',
+  './planches/etouffement-dos.jpg',
+  './planches/voies-aeriennes.jpg',
+  './planches/pls.jpg',
+  './planches/rautek.png'
+];
+
 self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE)
@@ -30,7 +45,12 @@ self.addEventListener('install', function (e) {
       .then(function (c) {
         return c.addAll(ASSETS.map(function (u) {
           return new Request(u, { cache: 'reload' });
-        }));
+        })).then(function () {
+          // une planche manquante ne doit pas faire échouer toute l'installation
+          return Promise.all(PLATES.map(function (u) {
+            return c.add(new Request(u, { cache: 'reload' })).catch(function () {});
+          }));
+        });
       })
       .then(function () { return self.skipWaiting(); })
   );

@@ -1,5 +1,5 @@
 /* =========================================================================
-   Premiers secours en Suisse — rendering + interaction
+   Premiers secours en Suisse, rendering + interaction
    Reads NUMBERS / GROUPS / SECTIONS from content.js and SOURCES from sources.js.
    No dependencies.
    ========================================================================= */
@@ -40,7 +40,7 @@
   }
 
   /* Content strings may contain **bold** and a {144} phone shorthand.
-     Built as DOM nodes — never innerHTML — so content stays injection-safe. */
+     Built as DOM nodes, never innerHTML, so content stays injection-safe. */
   function rich(text, target) {
     var out = target || document.createDocumentFragment();
     var re = /\*\*(.+?)\*\*|\{(\d{3,4})\}/g;
@@ -147,7 +147,7 @@
     },
 
     /* Recursive decision tree. Every question owns its own branches, and a branch
-       may carry a follow-up question — so a path can never end up beside an
+       may carry a follow-up question, so a path can never end up beside an
        outcome belonging to a different question. */
     tree: function (b) {
       var wrap = el('div', 'b');
@@ -173,9 +173,9 @@
       }
     },
 
-    /* Schéma SVG. Le markup vient de figures.js, c'est du code que nous écrivons
-       — pas une donnée de contenu — d'où l'usage d'innerHTML ici uniquement.
-       La légende, elle, reste construite en DOM comme le reste. */
+    /* Schéma SVG. Le markup vient de figures.js : c'est du code que nous
+       écrivons, pas une donnée de contenu, d'où l'usage d'innerHTML ici
+       uniquement. La légende, elle, reste construite en DOM comme le reste. */
     figure: function (b) {
       var fig = window.FIGURES && window.FIGURES[b.name];
       if (!fig) return el('div');
@@ -197,10 +197,45 @@
       return wrap;
     },
 
+    /* Planche sous licence (SRC, Samaritains, etc.). Le fichier vit dans
+       planches/ et n'est pas fourni avec le site : si l'image manque ou échoue,
+       la figure se retire d'elle-même plutôt que d'afficher une image cassée,
+       et le texte de la section reste seul. Le crédit est obligatoire dès qu'une
+       planche sous licence est utilisée. */
+    image: function (b) {
+      // Masquée tant que le chargement n'a pas réussi : une planche absente ne
+      // laisse ainsi ni image cassée ni cadre vide. Pas de loading="lazy" ici,
+      // sinon une image hors écran n'est jamais chargée, donc jamais ni révélée
+      // ni retirée. Le panneau n'étant construit qu'à l'ouverture de la carte,
+      // le chargement est déjà différé de fait.
+      var wrap = el('figure', 'b fig fig--pending');
+      if (b.title) wrap.appendChild(el('h4', null, b.title));
+
+      var box = el('div', 'fig__box');
+      var img = new Image();
+      img.alt = b.alt || '';
+      img.decoding = 'async';
+      img.onload  = function () { wrap.classList.remove('fig--pending'); };
+      img.onerror = function () { wrap.remove(); };
+      img.src = b.src;
+      box.appendChild(img);
+      wrap.appendChild(box);
+
+      var cap = el('figcaption', 'fig__cap');
+      if (b.caption) rich(b.caption, cap);
+      if (b.credit) {
+        var cr = el('span', 'fig__credit');
+        rich(b.credit, cr);
+        cap.appendChild(cr);
+      }
+      wrap.appendChild(cap);
+      return wrap;
+    },
+
     fast: function (b) {
       var wrap = el('div', 'b');
       var box = el('div', 'fast');
-      box.appendChild(el('div', 'fast__t', b.title || 'AVC — FAST'));
+      box.appendChild(el('div', 'fast__t', b.title || 'Le test FAST'));
       var g = el('div', 'fast__g');
       b.items.forEach(function (it) {
         var c = el('div', 'fast__c');
@@ -249,7 +284,7 @@
       if (!s) return;
       var li = el('li');
       li.appendChild(el('em', null, s.org));
-      li.appendChild(document.createTextNode(' — '));
+      li.appendChild(document.createTextNode(' : '));
       if (s.url) {
         var a = el('a', null, s.title);
         a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
@@ -279,7 +314,7 @@
       var li = el('li');
       var a = el('a');
       a.href = 'tel:' + n.num;
-      a.setAttribute('aria-label', n.label + ' — appeler le ' + n.num.split('').join(' '));
+      a.setAttribute('aria-label', n.label + ', appeler le ' + n.num.split('').join(' '));
       a.appendChild(icon(n.icon));
       var box = el('div');
       box.appendChild(el('div', 'nums__n', n.num));
@@ -483,8 +518,8 @@
     return (s || '').toLowerCase().normalize('NFD').replace(new RegExp('[\\u0300-\\u036f]', 'g'), '');
   }
 
-  /* Flatten a section into one searchable string, including deep content —
-     searching "adrénaline" should find the anaphylaxis card even though the
+  /* Flatten a section into one searchable string, including deep content.
+     Searching "adrénaline" should find the anaphylaxis card even though the
      word only appears at Pro level. */
   function haystack(sec) {
     if (sec._hay) return sec._hay;

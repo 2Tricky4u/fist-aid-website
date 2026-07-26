@@ -1,0 +1,68 @@
+PLANCHES SOUS LICENCE
+=====================
+
+Illustrations officielles utilisees sous autorisation, avec mention de la
+provenance. Le credit affiche sous chaque image vient du champ `credit:` du
+bloc correspondant dans content.js.
+
+PRESENTES
+---------
+Extraites des directives de cours publiees par le Swiss Resuscitation Council
+(editions 2021 et 2025), redimensionnees a 1200 px de large et recompressees
+pour le web (339 Ko au total).
+
+Sources : directives de cours du Swiss Resuscitation Council (2021 et 2025)
+et supports des Samaritains Suisse.
+
+  rcp-mains.jpg          Compressions, mains et posture, DAE connecte   [SRC]
+  dae-electrodes.jpg     Pose d'une electrode de defibrillateur         [SRC]
+  alerter-144.jpg        Appel du 144 sans quitter la victime           [SRC]
+  accident-rcp.jpg       Reanimation au bord de la route, gilet+gants   [SRC]
+  voies-aeriennes.jpg    Bascule de la tete, menton releve       [Samaritains]
+  etouffement-dos.jpg    Claques dorsales, victime penchee       [Samaritains]
+  compression-plaie.jpg  Compression manuelle directe d'une plaie [Samaritains]
+  pls.jpg                Position laterale de securite, position finale
+                                                       [Wikimedia Commons, CC0]
+  rautek.png             Degagement d'urgence, prise de Rautek
+                                                       [Wikimedia Commons, CC0]
+
+Les deux fichiers CC0 sont dans le domaine public : aucune contrainte de
+reutilisation. Le credit affiche reste une bonne pratique.
+
+A VERIFIER : les trois images Samaritains proviennent de leurs pages publiques.
+Certaines illustrations de leur site sont des photos de banque d'images tierces,
+que votre autorisation ne couvrirait pas. Confirmez aupres d'eux que ces trois
+fichiers sont bien leur production avant mise en ligne.
+
+MANQUANTES
+----------
+Les emplacements ci-dessous sont deja cables dans content.js. Un fichier depose
+apparait automatiquement ; en son absence la figure se retire et la section
+reste lisible.
+
+  etouffement-adulte.jpg      Compressions abdominales (2e intention)
+  nourrisson-rcp.jpg          Compressions du nourrisson, deux pouces encerclants
+  nourrisson-etouffement.jpg  Nourrisson, claques dorsales et compressions
+ATTENTION pour nourrisson-rcp.jpg : la quasi-totalite des illustrations
+disponibles en ligne montrent encore la technique A DEUX DOIGTS, abandonnee par
+l'ERC et le SRC en 2025. N'acceptez qu'une planche montrant les DEUX POUCES,
+mains encerclant le thorax. Une image trouvee sur Commons a ete ecartee pour
+cette raison.
+
+Ces planches ne figurent pas dans les documents publics du SRC : elles font
+partie du materiel de cours distribue aux prestataires. Demandez-les
+directement au SRC en invoquant votre autorisation.
+
+AJOUTER UNE PLANCHE
+-------------------
+1. Deposer le fichier ici sous le nom attendu ci-dessus.
+2. Redimensionner a ~1200 px de large et recompresser :
+
+   python -c "from PIL import Image; im=Image.open('planches/X.jpg').convert('RGB'); w,h=im.size; im=im.resize((1200,round(h*1200/w))); im.save('planches/X.jpg','JPEG',quality=82,optimize=True,progressive=True)"
+
+3. Ajouter le chemin a PLATES au debut de sw.js (offline garanti).
+4. Incrementer CACHE dans sw.js.
+5. Verifier `credit:` et `alt:` dans content.js. L'attribut alt doit decrire le
+   geste, pas seulement le sujet : c'est ce que lira un lecteur d'ecran.
+
+La resolution doit permettre d'apprendre le geste, pas seulement de l'illustrer.
