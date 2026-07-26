@@ -1,0 +1,50 @@
+{
+  "name": "Premiers secours en Suisse",
+  "short_name": "Premiers secours",
+  "description": "Mémo de premiers secours pour la Suisse : numéros d'urgence, RCP/DAE, étouffement, hémorragies, brûlures, AVC. Fonctionne hors ligne.",
+  "lang": "fr-CH",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F7F8FA",
+  "theme_color": "#E8112D",
+  "categories": ["medical", "health", "education", "utilities"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23E8112D'/%3E%3Cpath d='M208 96h96v112h112v96H304v112h-96V304H96v-96h112z' fill='white'/%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%23E8112D'/%3E%3Cpath d='M216 128h80v88h88v80h-88v88h-80v-88h-88v-80h88z' fill='white'/%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "RCP / DAE",
+      "short_name": "RCP",
+      "url": "./index.html#rcp-dae"
+    },
+    {
+      "name": "Étouffement",
+      "short_name": "Étouffement",
+      "url": "./index.html#etouffement"
+    },
+    {
+      "name": "Hémorragies",
+      "short_name": "Hémorragies",
+      "url": "./index.html#saignement"
+    },
+    {
+      "name": "AVC — FAST",
+      "short_name": "AVC",
+      "url": "./index.html#avc"
+    }
+  ]
+}
