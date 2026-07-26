@@ -173,6 +173,30 @@
       }
     },
 
+    /* Schéma SVG. Le markup vient de figures.js, c'est du code que nous écrivons
+       — pas une donnée de contenu — d'où l'usage d'innerHTML ici uniquement.
+       La légende, elle, reste construite en DOM comme le reste. */
+    figure: function (b) {
+      var fig = window.FIGURES && window.FIGURES[b.name];
+      if (!fig) return el('div');
+      var wrap = el('figure', 'b fig');
+      if (b.title) wrap.appendChild(el('h4', null, b.title));
+
+      var box = el('div', 'fig__box');
+      var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', fig.viewBox);
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', fig.title);
+      svg.innerHTML = fig.svg;
+      box.appendChild(svg);
+      wrap.appendChild(box);
+
+      var cap = el('figcaption', 'fig__cap');
+      rich(b.caption || fig.title, cap);
+      wrap.appendChild(cap);
+      return wrap;
+    },
+
     fast: function (b) {
       var wrap = el('div', 'b');
       var box = el('div', 'fast');
@@ -474,6 +498,7 @@
         }).join(' '));
         if (b.rows) parts.push(b.rows.map(function (r) { return r.join(' '); }).join(' '));
         if (b.foot) parts.push(b.foot);
+        if (b.caption) parts.push(b.caption);
         if (b.q) walkTree(b);
       });
     }

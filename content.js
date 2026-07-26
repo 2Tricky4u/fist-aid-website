@@ -271,6 +271,11 @@ window.SECTIONS = [
       'Basculez la tête légèrement en arrière, bouche dirigée vers le sol.',
       'Appelez le {144} et surveillez la respiration **en continu**.'
     ]},
+    { type: 'note', title: 'Le but, plus important que la forme exacte', text:
+      'Une PLS parfaite n’existe pas. Ce qui compte est le résultat : la personne est **stable sur le ' +
+      'côté**, la **bouche dirigée vers le sol** pour que salive, sang ou vomissures s’écoulent au ' +
+      'lieu d’être inhalés, et le **cou n’est pas plié**. Si vous obtenez cela, la position est bonne. ' +
+      'Un geste imparfait vaut infiniment mieux qu’une personne laissée sur le dos.' },
     { type: 'note', title: 'Ne laissez jamais la personne seule', text:
       'Une personne en PLS peut cesser de respirer à tout moment. La PLS ne dispense pas de ' +
       'surveiller — elle vous oblige à surveiller.' },
@@ -338,6 +343,10 @@ window.SECTIONS = [
       'Personne ne touche la victime pendant l’analyse et pendant le choc.',
       'Reprenez **immédiatement** les compressions après le choc, sans attendre de vérifier quoi que ce soit.'
     ]},
+    { type: 'figure', name: 'compression', wide: true, title: 'Point de compression et posture',
+      caption: 'Le repère « milieu de la poitrine » suffit : inutile de chercher un point anatomique précis, cela ne fait que retarder le premier appui.' },
+    { type: 'figure', name: 'dae', wide: true, title: 'Position des électrodes',
+      caption: 'Chez l’adulte, sous la clavicule droite et sous l’aisselle gauche. Chez l’enfant de moins de 25 kg ou de moins de 8 ans, une électrode devant et une dans le dos.' },
     { type: 'note', title: 'Si les insufflations sont impossibles ou refusées', text:
       'Effectuez des **compressions continues** sans interruption. Une réanimation par compressions ' +
       'seules est très largement préférable à l’absence de réanimation. La réticence à faire du ' +
@@ -534,6 +543,10 @@ window.SECTIONS = [
       '**Notez l’heure de pose** et écrivez-la sur la victime si possible.',
       'Ne le desserrez jamais : seul un professionnel de santé le retire.'
     ]},
+    { type: 'figure', name: 'pansement', wide: true, title: 'Pansement compressif',
+      caption: 'La compression **manuelle** directe reste la première ligne : la main concentre la pression sur le point qui saigne, ce qu’un bandage réparti sur la circonférence du membre fait mal.' },
+    { type: 'figure', name: 'garrot', wide: true, title: 'Pose d’un garrot',
+      caption: 'Uniquement si la compression directe échoue. **5 à 7 cm au-dessus** de la plaie, jamais sur une articulation, serré jusqu’à l’arrêt du saignement — un garrot mal serré aggrave l’hémorragie en bloquant le retour veineux sans interrompre le flux artériel.' },
     { type: 'steps', title: 'Petite plaie', items: [
       'Lavez-vous les mains, protégez-vous.',
       'Rincez et nettoyez la plaie à l’eau claire ou au sérum physiologique.',
@@ -1293,6 +1306,8 @@ window.SECTIONS = [
       'et le reste sur les 16 suivantes, le compte partant de **l’heure de la brûlure** et non de ' +
       'l’arrivée à l’hôpital. Ce n’est qu’un point de départ : l’ajustement se fait sur la **diurèse**, ' +
       'maintenue autour de 0,5 à 1 ml/kg/h, meilleur indicateur d’un remplissage adéquat.' },
+    { type: 'figure', name: 'jackson', wide: true, title: 'Les trois zones de Jackson',
+      caption: 'Tout l’enjeu du refroidissement porte sur la **zone de stase** : lésée mais encore viable, elle récupère ou bascule en nécrose selon la prise en charge des heures qui suivent.' },
     { type: 'note', title: 'Estimer la surface brûlée', text:
       'La paume de la main de la victime, doigts inclus, représente environ **1 %** de sa surface ' +
       'corporelle : c’est le repère le plus simple sur le terrain. La règle des 9 de Wallace ' +
@@ -1977,6 +1992,8 @@ window.SECTIONS = [
       'Vérifiez conscience et respiration ; appliquez l’algorithme d’évaluation.',
       'Couvrez les blessés, rassurez-les, restez avec eux.'
     ]},
+    { type: 'figure', name: 'triangle', wide: true, title: 'Où poser le triangle',
+      caption: 'À 120 km/h, un véhicule parcourt environ **33 mètres par seconde** et sa distance d’arrêt dépasse largement 100 m. Davantage encore si la visibilité est réduite ou après un virage.' },
     { type: 'note', title: 'Couloir de secours', text:
       'Dès que le trafic ralentit ou s’arrête sur une route à plusieurs voies, formez immédiatement ' +
       'un couloir — **sans attendre** d’entendre les sirènes. Les véhicules de la voie de gauche ' +
@@ -2000,9 +2017,14 @@ window.SECTIONS = [
     { type: 'prose', title: 'Pourquoi ne pas extraire un blessé', text:
       'L’extraction non nécessaire mobilise le rachis, peut aggraver des lésions instables et ' +
       'transformer un déficit partiel en déficit complet. Elle interrompt aussi la contention ' +
-      'relative offerte par le siège. L’extraction d’urgence — technique en un temps, dite de ' +
-      'Rautek — n’est justifiée que si le maintien sur place tue plus sûrement que la mobilisation : ' +
-      'feu, immersion, fumée, ou nécessité de réanimer.' },
+      'relative offerte par le siège. L’extraction d’urgence n’est justifiée que si le maintien sur ' +
+      'place tue plus sûrement que la mobilisation : feu, immersion, fumée, ou nécessité de réanimer.' },
+    { type: 'note', title: 'La technique en un temps, dite de Rautek', text:
+      'Passez vos bras sous les aisselles de la victime par l’arrière, saisissez **un** de ses ' +
+      'avant-bras à deux mains en le ramenant en travers de sa poitrine, puis reculez en gardant ' +
+      'votre dos droit et son tronc aligné avec sa tête. C’est un geste qui **s’apprend en cours** : ' +
+      'mal exécuté, il aggrave une lésion du rachis. À réserver aux situations où rester sur place ' +
+      'est plus dangereux que bouger.' },
     { type: 'note', title: 'Cinétique et lésions à suspecter', text:
       'Éjection du véhicule, décès d’un occupant du même véhicule, tonneau, intrusion importante dans ' +
       'l’habitacle, chute de plus de trois mètres, piéton ou cycliste projeté : ces éléments de ' +
@@ -2050,6 +2072,8 @@ window.SECTIONS = [
       'la fumée ni de la chaleur**. Seules les **issues de secours** donnent accès à un espace ' +
       'protégé. Ne vous réfugiez jamais dans une niche SOS en cas d’incendie : gagnez une issue de ' +
       'secours et sortez.' },
+    { type: 'figure', name: 'tunnel', wide: true, title: 'Niche SOS ou issue de secours ?',
+      caption: 'La confusion entre les deux peut être fatale. La **niche SOS** abrite un téléphone et des extincteurs mais **ne protège ni de la fumée ni de la chaleur**. Seule l’**issue de secours** donne accès à un espace protégé.' },
     { type: 'note', title: 'Repères de distance', text:
       'Les niches SOS avec téléphone d’urgence sont réparties tous les **200 mètres** environ, et les ' +
       'issues de secours à intervalles réguliers — les valeurs exactes varient selon l’âge et la ' +
@@ -2188,6 +2212,14 @@ window.SECTIONS = [
       'formations proposées par la Croix-Rouge, les services de sauvetage cantonaux et de nombreuses entreprises ;',
       'modules spécifiques : premiers secours à l’enfant, secourisme en montagne, formation en entreprise.'
     ]},
+    { type: 'warn', title: 'Un texte ne remplace pas une démonstration', text:
+      'Ce site décrit les gestes ; il ne les **montre** pas. Pour les techniques qui dépendent de la ' +
+      'position du corps — PLS, compressions, prise du nourrisson, dégagement d’urgence — un schéma ' +
+      'approximatif induit en erreur plus qu’il n’aide. Les planches et vidéos officielles du **SRC** ' +
+      'et des **Samaritains** sont conçues pour cela, et un cours en présentiel reste irremplaçable : ' +
+      'c’est le seul cadre où quelqu’un corrige votre profondeur de compression et la position de vos ' +
+      'mains. Les schémas présents ici se limitent volontairement aux **repères de position** ' +
+      '(électrodes, garrot, distances), où être schématique n’induit pas en erreur.' },
     { type: 'note', title: 'Pourquoi se recycler', text:
       'Les compétences pratiques — profondeur des compressions, séquence, utilisation du DAE — se ' +
       'dégradent en quelques mois sans pratique. Un recyclage régulier, de l’ordre de **tous les ' +

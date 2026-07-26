@@ -8,13 +8,14 @@
 
 /* Bump this on every content or asset release: a new name forces a fresh
    precache on install and drops the old one on activate. */
-var CACHE = 'psch-v9';
+var CACHE = 'psch-v17';
 
 var ASSETS = [
   './',
   './index.html',
   './styles.css',
   './sources.js',
+  './figures.js',
   './content.js',
   './app.js',
   './manifest.json'
@@ -23,7 +24,14 @@ var ASSETS = [
 self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE)
-      .then(function (c) { return c.addAll(ASSETS); })
+      // `cache: 'reload'` contourne le cache HTTP du navigateur. Sans cela,
+      // addAll() peut pré-cacher une version périmée d'un fichier et la servir
+      // indéfiniment : le bump de CACHE ne suffirait pas à publier la mise à jour.
+      .then(function (c) {
+        return c.addAll(ASSETS.map(function (u) {
+          return new Request(u, { cache: 'reload' });
+        }));
+      })
       .then(function () { return self.skipWaiting(); })
   );
 });
